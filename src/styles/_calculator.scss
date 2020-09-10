@@ -1,0 +1,305 @@
+.calculator {
+
+  &__text {
+    margin-bottom: 70px;
+  }
+
+  &__item {
+    &-title {
+      position: relative;
+      font-size: 32px;
+      line-height: 45px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      z-index: 9;
+
+      span {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        font-family: CoFoSans;
+        font-size: 172px;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: 5.376px 14.004px 18px rgba(70, 70, 70, 0.34);
+        z-index: -9;
+      }
+    }
+
+    &-text {
+      margin-bottom: 40px;
+    }
+
+    &-block {
+      position: relative;
+      width: 310px;
+      padding-top: 100px;
+      background-color: $red-color;
+      border-radius: 30px;
+
+      .block {
+        &-image {
+          position: absolute;
+          margin-top: 21%;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -100%);
+        }
+
+        &-title {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 800;
+          margin-bottom: 30px;
+
+        }
+
+        &__list {
+          list-style-type: none;
+
+          &-item {
+            margin-bottom: 20px;
+
+            &-label {
+              font-size: 10px;
+              text-transform: uppercase;
+              font-weight: 700;
+              color: #909090;
+              letter-spacing: 0.3px;
+              margin-bottom: 0;
+            }
+
+            &-text {
+              font-size: 19px;
+              font-weight: 800;
+              color: #fff;
+            }
+          }
+        }
+
+        &-percent {
+          position: relative;
+          font-size: 60px;
+          font-weight: 800;
+          color: #fff;
+          margin-top: 70px;
+
+          span {
+            content: '115%';
+            position: absolute;
+            font-family: "Cyrvetica";
+            font-weight: 400;
+            color: #e9e9e9a8;
+            font-size: 76px;
+            width: 100%;
+            left: 0%;
+            transform: translateY(-45px);
+          }
+        }
+
+        &-btn {
+          width: 220px;
+          background-color: #fff;
+          border-radius: 35px;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $red-color;
+          padding: 20px 0;
+          transform: translateY(50%);
+          box-shadow: 9.44px 11.657px 44.09px 14.91px rgba(145, 35, 28, 0.26);
+        }
+
+      }
+
+    }
+  }
+
+  .currency__selectors {
+    .currency__item {
+      border-radius: 30px;
+      background: linear-gradient(to right, #c82b21, #9c1d15);
+      width: 90%;
+      height: 108px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 25px;
+      margin: 30px 20px 0;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+
+      @include for-medium-up {
+        width: 113px;
+        padding: 0;
+      }
+
+      span {
+        color: #fff;
+        font-family: Arial Black, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 60px;
+        font-weight: 800;
+      }
+
+      &.active {
+        background: $lilac-color;
+        @include for-medium-up {
+          transform: translateY(-30px);
+        }
+      }
+    }
+  }
+
+  .button_range_sum {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    .the_sum_of_tariffs {
+      font-size: 34px;
+      font-weight: 800;
+      color: #091d42;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      border: 0;
+      outline: 0 !important;
+      @include for-medium-up {
+        font-size: 50px;
+      }
+    }
+
+    .block_white {
+      padding: 0 20px;
+      margin-top: 20px;
+      border-radius: 30px;
+      box-shadow: 2px 6px 17px 0 #9c2b2b2a;
+
+      .irs--big {
+        top: -17px;
+        height: 50px;
+        position: relative;
+        display: block;
+        user-select: none;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+
+        .irs-handle {
+          top: 25px;
+          border: 0;
+          width: 35px;
+          height: 35px;
+          background: #c72a20 !important;
+          box-shadow: 8px 6px 24px 0 #ff020299;
+          position: absolute;
+          display: block;
+          box-sizing: border-box;
+          cursor: default;
+          z-index: 1;
+          border-radius: 30px;
+        }
+
+        .irs-bar {
+          top: 32px;
+          background: #e09292;
+          border: 1px solid #ca4242;
+          box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.5);
+          height: 23px;
+          border: 0;
+        }
+
+        .irs-bar--single {
+          border-radius: 12px 0 0 12px;
+        }
+
+        .irs-shadow {
+          height: 1px;
+          bottom: 16px;
+          background-color: #ca424280;
+        }
+      }
+
+      .irs-line {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        outline: none !important;
+        top: 33px;
+        background-color: #f6f6f6;
+        border-radius: 12px;
+        height: 20px;
+        border: 0;
+      }
+
+      .irs-hidden-input, .js-range-slider {
+        position: absolute !important;
+        display: block !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden;
+        outline: none !important;
+        z-index: -9999 !important;
+        background: none !important;
+        border-style: solid !important;
+        border-color: #0000 !important;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    padding: 100px 0 150px;
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto;
+    @include for-medium-up {
+      width: 100%;
+    }
+    .swiper-slide {
+      &:hover {
+        background-color: #942922;
+      }
+      &.active {
+        background-color: #942922;
+      }
+    }
+
+    .arrow {
+      display: block;
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+
+      @include for-large-up {
+        display: none;
+      }
+    }
+
+    .arrowLeft {
+      background-image: url(./images/calculator/arrowLeft.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      left: 0;
+    }
+
+    .arrowRight {
+      background-image: url(./images/calculator/arrowRight.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      right: 0;
+    }
+  }
+
+
+}

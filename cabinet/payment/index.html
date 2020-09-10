@@ -1,0 +1,134 @@
+<!--include _breadcrumbs.pug-->
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="src/css/main.css">
+  <title>Пополнить</title>
+</head>
+
+<body class="webpage">
+  <main>
+    <div class="cabinet">
+      <div class="cabinet__inner container">
+        <aside class="cabinet__aside aside">
+          <header class="aside__header">
+            <button class="aside__close" type="button">
+              <span class="visually-hidden">Скрыть меню</span>
+            </button>
+            <div class="aside__balance balance">
+              <div class="balance__text">Мой баланс</div>
+              <div class="balance__value">0,00 RUB</div>
+            </div>
+            <ul class="aside__actions account-actions">
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--plus" href="#">
+                  <span class="visually-hidden">Добавить</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--wallet" href="/cabinet/payment/index.html">
+                  <span class="visually-hidden">Пополнить</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--transfer" href="#">
+                  <span class="visually-hidden">Вывести</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--exchange" href="#">
+                  <span class="visually-hidden">Обменять</span>
+                </a>
+              </li>
+            </ul>
+          </header>
+          <nav class="aside__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item navigation__item--current">
+                <a class="navigation__link navigation__link--profile">Профиль</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--profits" href="/cabinet/invest.html">Инвестиции</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--history" href="/cabinet/history/index.html">История</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--support" href="/cabinet/support/index.html">Поддержка</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--team" href="/cabinet/team/index.html">Команда</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--setting" href="/cabinet/settings/index.html">Настройки</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <article class="cabinet__main">
+          <header class="cabinet__header header">
+            <div class="header__top">
+              <button class="header__menu" type="button">
+                <span class="visually-hidden">Показать меню</span>
+              </button>
+              <a class="header__top-btn btn" href="#">Новая инвестиция</a>
+              <div class="header__user">
+                <div class="header__user-name">
+                  <a href="#">loginname123</a>
+                  <div class="user_menu">
+                    <ul>
+                      <li><a href="#">Установка аватара</a></li>
+                      <li><a href="#">Настройки</a></li>
+                      <li class="exit"><a href="#">Выход</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="header__user-toggle" type="button" aria-pressed="false">
+                  <span class="visually-hidden">Действия с аккаунтом</span>L
+                </button>
+              </div>
+            </div>
+            <h1 class="header__heading">Пополнение баланса</h1>
+          </header>
+          <div class="cabinet__content">
+            <section class="cabinet__accounts-board accounts-board">
+              <h2 class="accounts-board__heading heading">Выберите варианты пополнения</h2>
+              <div class="accounts-board__cards">
+                <a href="/cabinet/payment/wallets.html" class="accounts-board__cards-item">
+                  <div class="accounts-board__cards-images">
+                    <img src="/cabinet/payment/src/img/wallet.svg" alt="wallets" class="accounts-board__cards-img">
+                  </div>
+                  <h3 class="accounts-board__cards-title">Электронным кошельком</h3>
+                  <p class="accounts-board__cards-text">Qiwi, Payeer, Perfect Money</p>
+                </a>
+                <a href="/cabinet/payment/cryptocurrency.html" class="accounts-board__cards-item">
+                  <div class="accounts-board__cards-images">
+                    <img src="/cabinet/payment/src/img/tether.svg" alt="tether" class="accounts-board__cards-images-img">
+                    <img src="/cabinet/payment/src/img/bitcoin.svg" alt="bitcoin" class="accounts-board__cards-images-img">
+                  </div>
+                  <h3 class="accounts-board__cards-title">Криптовалютой</h3>
+                  <p class="accounts-board__cards-text">Tether, Bitcoin</p>
+                </a>
+              </div>
+            </section>
+            <section class="investments-board">
+              <a class="webpage__fixed-btn btn" href="#">отзывы</a>
+              <div class="investments-board__message">
+                <div class="investments-board__message-title heading">Возникли трудности с пополнением?</div>
+                <div class="investments-board__message-text">Мы спешим на помощь</div>
+                <a class="investments-board__message-btn btn" href="#">Помогите мне</a>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+.header {
+  padding-top: 60px;
+  padding-bottom: 95px;
+  background-image: url(./images/header/header_bg.png);
+  background-position: center top;
+
+  &__info {
+    &-phone {
+      font-size: 30px;
+      color: $lilac-color;
+      font-weight: 700;
+
+    }
+
+    &-schedule {
+      font-size: 10px;
+      font-weight: 600;
+      color: #fff;
+      background-color: $red-color;
+      border-radius: 20px;
+    }
+  }
+
+  &__auth {
+    &-profile {
+      font-size: 14px;
+      font-weight: 700;
+      color: $lilac-color;
+
+      &:hover {
+        color: $lilac-color;
+      }
+    }
+
+    &-reg-btn {
+      padding: 14px 25px;
+      font-weight: 700;
+      background-color: $red-color;
+      color: #fff;
+      border-radius: 30px;
+    }
+  }
+
+  &__text {
+    &-title {
+      span {
+        color: $red-color;
+      }
+    }
+
+    &-nav {
+      .open_an_account {
+        padding: 17px 50px;
+        font-weight: 700;
+        background-color: $red-color;
+        color: #fff;
+        border-radius: 30px;
+        box-sizing: border-box;
+      }
+
+      .more-details {
+        color: $color-black;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+    }
+  }
+
+  &__illustration {
+    position: relative;
+
+    &-items {
+      position: absolute;
+      width: 220px;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      @include for-small-up {
+        width: 380px;
+        top: 40px;
+      }
+    }
+
+    &-item {
+      border-radius: 20px;
+      background: linear-gradient(4deg, #cc2c22 0%, #981b14 100%);
+      width: 181px;
+      height: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      @include for-medium-up {
+        height: 77px;
+      }
+
+      .name {
+        font-size: 7px;
+        line-height: 1.2;
+        color: #bababa;
+        text-transform: uppercase;
+        margin: 0;
+        text-align: center;
+
+        @include for-medium-up {
+          font-size: 10px;
+        }
+      }
+
+      .number {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0;
+
+        @include for-medium-up {
+          font-size: 25px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

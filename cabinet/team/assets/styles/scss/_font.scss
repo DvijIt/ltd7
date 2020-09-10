@@ -1,0 +1,80 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: $primaryTextColor;
+}
+
+.font-page-title {
+  color: $primaryTextColor;
+  @include font(18px, 700, $primaryTextColor);
+}
+
+.font-card-heading {
+  @include font(12px, 500, $primaryTextColor);
+  margin-bottom: 20px;
+}
+
+.font-card-content-title {
+  @include font(14px, 600, $primaryTextColor);
+  width: 100%;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.font-btn {
+  @include font(11px, 600, $btnTextColor);
+  letter-spacing: 1px;
+}
+
+.font-header-btn {
+  @include font(8px, 500, $btnTextColor);
+}
+
+.font-username {
+  @include font(11px, 400, $primaryTextColor);
+}
+
+.font-user-icon {
+  @include font(13px, 800, $userIconColor);
+}
+
+.font-menu {
+  @include font(8px, 500, $secondaryTextColor);
+}
+
+.font-balance-title {
+  @include font(12px, 500, $secondaryTextColor);
+  letter-spacing: 1px;
+  word-spacing: -2px;
+}
+
+.font-balance-number {
+  @include font(18px, 500, $secondaryTextColor);
+  letter-spacing: 1px;
+}
+
+.card-partner .font-card-content-title {
+  @include font(20px, 700, $primaryColor);
+  width: 100%;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+
+.partner-link {
+  @include font(12px, 600, $primaryColor);
+  letter-spacing: 0.9px;
+  text-decoration: none;
+}
+
+.rank-elem__text {
+  @include font(11px, 500, $primaryColor);
+}
+
+.card-elem__title {
+  @include font(7px, 600, $primaryTextColor);
+}
+
+.card-elem__text {
+  @include font(13px, 700, $primaryTextColor);
+}

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: "Cyrvetica";
+  src: url('./fonts/Cyrvetica/Cyrvetica.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/Cyrvetica/Cyrvetica.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "CoFoSans";
+  src: url('./fonts/CoFoSans/CoFoSans-Bold.woff') format('woff'),
+       url('./fonts/CoFoSans/CoFoSans-Bold.ttf')  format('truetype'),
+}

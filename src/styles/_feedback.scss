@@ -1,0 +1,137 @@
+.feedback {
+  padding-top: 40px;
+
+  @include for-large-up {
+    padding-top: 120px;
+  }
+
+  &__comments {
+    margin-top: 100px;
+
+    &-count {
+      font-family: Arial, sans-serif;
+      position: relative;
+      height: max-content;
+      border-bottom: 2px solid $red-color;
+      padding-right: 20px;
+      font-size: 15px;
+      line-height: 23px;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        right: 0;
+        top: 50%;
+        background-image: url(./images/feedback/down-arrow.png);
+        background-repeat: no-repeat;
+        transform: translateY(-40%);
+      }
+    }
+
+    &-list {
+      list-style-type: none;
+
+      .card {
+        &-body {
+          font-family: Arial, sans-serif;
+        }
+
+        &-title {
+          font-size: 14px;
+          line-height: 23px;
+          color: $red-color;
+
+          span {
+            color: #8a8a8a;
+            font-size: 10px;
+            line-height: 23px;
+          }
+        }
+        &-text {
+          font-family: Arial, sans-serif;
+        }
+        .btn {
+          color: $red-color;
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
+
+  &__form {
+    font-family: Arial, sans-serif;
+    &-input {
+      flex-grow: 1;
+      position: relative;
+      
+      .form-control {
+        font-size: 12px;
+        @include for-large-up {
+          font-size: 1rem;
+        }
+      }
+
+      .input-group-append {
+        position: absolute;
+        height: 100%;
+        right: 0;
+        top: 0;
+      }
+
+      .input-group-text {
+        z-index: 99;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__pagination {
+    .pagination {
+      .page-item {
+        width: 23px;
+        height: 23px;
+        margin: 0 5px;
+        
+        &.disabled {
+          display: none;
+        }
+        &.active {
+          .page-link {
+            background-color: #fff;
+            border: none;
+          }
+        }
+      }
+      .page-link {  
+        background-color: #dedede;
+        height: 23px;
+        color: #000;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .btn-more {
+    margin-top: 70px;
+
+    a {
+      background-color: $red-color;
+      border-radius: 30px;
+      max-width: 380px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 4.265px 34.739px 45.6px 11.4px rgba(199, 42, 32, 0.26);
+    }
+  }
+}

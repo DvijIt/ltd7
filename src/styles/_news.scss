@@ -1,0 +1,29 @@
+.news {
+  margin-top: 60px;
+
+  @include for-medium-up {
+    margin-top: 100px;
+  }
+
+  @include for-large-up {
+    margin-top: 180px;
+  }
+
+  &__item {
+    .image {
+      img {
+        max-width: 100%;
+      }
+    }
+    .title {
+      font-size: 27px;
+      line-height: 45px;
+      color: #010101;
+      font-weight: 700;
+    }
+    .text {
+      font-size: 13px;
+    }
+  }
+
+}

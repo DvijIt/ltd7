@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "CyrveticaExtraOutline";
+  src: url("../../fonts/Cyrvetica\ Extra\ Outline.ttf");
+  src: url("../../fonts/Cyrvetica\ Extra\ Outline.woff") format("woff");
+  font-display: swap;
+}
+
+.font-section-title-shadow {
+  font: 77px "CyrveticaExtraOutline", sans-serif;
+  color: $primaryColor;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: absolute;
+  top: -40px;
+  z-index: -1;
+}
+
+.team .font-section-title-shadow {
+  left: calc(50% - 213px);
+}
+
+.benefits .font-section-title-shadow {
+  left: calc(50% - 322px);
+}
+
+.plans .font-section-title-shadow {
+  left: calc(50% - 152px);
+}
+
+.font-section-title {
+  width: 100%;
+  @include font(32px, bold, $primaryTextColor);
+  line-height: 1.3;
+}
+
+.font-section-subtitle {
+  width: 100%;
+  @include font(14px, 400, $primaryTextColor);
+  line-height: 1.7;
+}
+
+.font-p--dark {
+  @include font(14px, 400, $secondaryTextColor);
+}
+
+.font-pill {
+  @include font(9px, 500, $pillTextColor);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.font-btn {
+  @include font(14px, bold, $btnTextColor);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.font-accent {
+  color: $primaryColor;
+}
+
+.team-content__card p {
+  width: 100%;
+}
+
+.stats-block__title {
+  width: 100%;
+  margin-bottom: 15px;
+  @include font(25px, bold, $secondaryTextColor);
+  line-height: 1.4;
+}
+
+.slide {
+  text-align: center;
+  @include font(36px, bold, $secondaryTextColor);
+  line-height: 1.4;
+}
+
+// benefits
+
+.benefits-card__title {
+  padding-left: 20px;
+  margin-bottom: 14px;
+  @include font(28px, bold, $secondaryTextColor);
+  line-height: 1.6;
+}
+
+.benefits-card__subtitle {
+  width: 70%;
+  @include font(13px, 400, $primaryTextColor);
+  line-height: 1.8;
+}
+
+.benefits-cards__inner-header {
+  margin: 40px 0 45px;
+  font: 52px "CyrveticaExtraOutline", sans-serif;
+  color: $primaryColor;
+  text-transform: uppercase;
+}
+
+// plans
+
+.plans-date {
+  @include font(44px, 800, $additionalTextColor);
+  letter-spacing: 4px;
+}
+
+.plans-date--active {
+  @include font(58px, 800, $primaryColor);
+  margin-right: -10px;
+}
+
+.plans-card__text {
+  @include font(23px, bold, #ffffff);
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+}
+
+.plans-card__number {
+  padding-right: 5px;
+  font: 240px "CyrveticaExtraOutline", sans-serif;
+  color: $additionalTextColor;
+  line-height: 1;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 120px);
+  right: 0;
+}

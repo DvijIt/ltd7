@@ -1,0 +1,137 @@
+.statistic {
+  padding-top: 40px;
+
+  @include for-medium-up {
+    padding-top: 80px;
+  }
+
+  @include for-large-up {
+    padding-top: 120px;
+  }
+
+  &__block {
+    margin-top: 35px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0px 37px 62.37px 18.63px rgba(221, 221, 221, 0.33);
+    padding-bottom: 30px;
+
+    &-stats {
+      span {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+
+      h4 {
+        font-size: 42px;
+        font-weight: 800;
+
+        @include for-large-up {
+          font-size: 53px;
+        }
+      }
+    }
+
+    &-table {
+      margin-top: 20px;
+      @include for-medium-up {
+        margin-top: 40px;
+      }
+      @include for-large-up {
+        margin-top: 100px;
+      }
+
+      h4 {
+        font-size: 28px;
+        line-height: 45px;
+        color: $lilac-color;
+        font-weight: 700;
+      }
+
+      &-list {
+        margin-top: 55px;
+        padding: 0 45px;
+        list-style-type: none;
+
+        li {
+          display: flex;
+          flex-direction: column;
+
+          &:nth-of-type(odd) {
+            align-items: flex-start;
+          }
+
+          &:nth-of-type(even) {
+            align-items: flex-end;
+          }
+        }
+
+        .date {
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.3px;
+          color: #aeaeae;
+          text-align: left;
+        }
+
+        .person {
+          border-radius: 15px;
+          box-shadow: 0px 0px 16.2px 1.8px #91231c42;
+          width: 180px;
+          height: 59px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+
+          span {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #aaaaaa;
+          }
+
+          h5 {
+            font-size: 24px;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+
+  &__items {
+    &>div {
+      &:nth-child(1) {
+        .person {
+          background: linear-gradient(to right, #cc2c22 0%, #991c13 100%);
+        }
+      }
+
+      &:nth-child(2) {
+        .person {
+          background: linear-gradient(to right, #991c14 0%, #70110a 100%);
+        }
+      }
+
+      &:nth-child(3) {
+        .person {
+          background: linear-gradient(to right, #7a150d 0%, #ca2c22 100%);
+        }
+      }
+    }
+  }
+
+  .btn-more {
+    margin-top: 70px;
+    a {
+      background-color: $red-color;
+      border-radius: 30px;
+      max-width: 380px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 4.265px 34.739px 45.6px 11.4px rgba(199, 42, 32, 0.26);
+    }
+  }
+}

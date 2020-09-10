@@ -1,0 +1,201 @@
+.contacts {
+  &__header {
+    background-image: url(./images/contacts/contacts_bg.png);
+    padding-bottom: 220px;
+  }
+
+  &__info {
+    padding-bottom: 80px;
+
+    .inform {
+      margin-bottom: 10px;
+      padding: 35px 0 45px;
+      border-radius: 30px;
+      background: #fff;
+      box-shadow: 0px 20px 27.65px 7.35px rgba(129, 129, 129, 0.13);
+
+      @include for-large-up {
+        margin-bottom: 0;
+        background: linear-gradient(0deg, #efefef 14%, #ffffff 100%);
+      }
+
+      span {
+        display: block;
+        margin-top: 35px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+
+      h3 {
+        font-size: 25px;
+        font-weight: 800;
+      }
+
+      .fill_text {
+        max-width: 240px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        border-radius: 10px;
+        background-color: $red-color;
+        padding: 5px 0;
+        margin: 12px auto 0;
+        color: #fff;
+
+        a {
+          color: #e6e6e6;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__blogers {
+    padding-top: 30px;
+
+    @include for-large-up {
+      padding-top: 120px;
+    }
+
+    &-oportun {
+      position: relative;
+      font-family: Cyrvetica, sans-serif;
+      color: $red-color;
+      text-transform: uppercase;
+
+      img.tick {
+        position: absolute;
+        left: 50%;
+        z-index: -9;
+        transform: translate(-50%, -20%);
+      }
+    }
+
+    .email {
+      border-radius: 30px;
+      font-size: 48px;
+      font-weight: 800;
+      padding: 30px;
+      background-color: $red-color;
+      background-image: linear-gradient(to bottom, $red-color, #b1271e);
+      box-shadow: 2px 6px 17px 0 #ffd60233;
+      color: #fff;
+    }
+
+  }
+
+  &__members {
+    margin-top: 50px;
+    padding-bottom: 30px;
+
+    @include for-large-up {
+      margin-top: 130px;
+      padding-bottom: 100px;
+    }
+
+    &-person {
+      &-img {
+        border-radius: 50%;
+        border: 5px solid $red-color;
+        box-shadow: 12.79px 5.694px 13.44px 2.56px #ff00002b;
+      }
+
+      h2 {
+        margin-top: 30px;
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 800;
+      }
+
+      .rate {
+        margin-top: 24px;
+
+        .stars {
+          width: 130px;
+          margin: 0 auto;
+          color: #fff;
+          background-color: #c72a20;
+          box-shadow: 8.222px 3.661px 14.24px 1.76px rgba(255, 0, 0, 0.3);
+          padding: 15px 0;
+          font-size: 24px;
+          font-weight: 800;
+          line-height: 34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 30px;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+
+        span {
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.3px;
+          margin-top: 15px;
+          text-transform: uppercase;
+        }
+      }
+
+    }
+  }
+
+  &__destination {
+    padding-top: 40px;
+
+    @include for-large-up {
+      padding-top: 120px;
+    }
+
+    &-image_map {
+      position: relative;
+      padding-top: 415px;
+
+      @include for-large-up {
+        padding-top: 115px;
+      }
+    }
+
+
+    &-inform {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 30px;
+      background-color: #ffffff;
+      box-shadow: 0px 28px 27.65px 7.35px #81818121;
+
+      ul {
+        li {
+          span {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+          }
+
+          h4 {
+            font-size: 25px;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+
+    .btn-more {
+      transform: translateY(-50%);
+    }
+
+  }
+
+  &__footer {
+    background-image: url(./images/contacts/contacts_mobile_footer_bg.png);
+
+    @include for-large-up {
+      background-image: url(./images/contacts/contacts_footer_bg.png);
+    }
+  }
+}

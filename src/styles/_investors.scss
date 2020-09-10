@@ -1,0 +1,77 @@
+.investors {
+  padding-top: 70px;
+
+  @include for-medium-up {
+    padding-top: 120px;
+  }
+
+  @include for-large-up {
+    padding-top: 220px;
+  }
+
+  &__block {
+    margin-bottom: 30px;
+
+    @include for-medium-up {
+      margin-bottom: 70px;
+    }
+
+    @include for-large-up {
+      margin-bottom: 150px;
+    }
+
+    .top {
+      margin-bottom: 40px;
+
+      img {
+        max-width: 60%;
+
+        @include for-medium-up {
+          max-width: 60%;
+        }
+      }
+    }
+
+    .step {
+      font-size: 107px;
+      line-height: 74px;
+      font-family: Cyrvetica, sans-serif;
+      color: $red-color;
+      margin-bottom: 0;
+
+      @include for-medium-up {
+        font-size: 166px;
+        line-height: 130px;
+      }
+
+      @include for-large-up {
+        font-size: 186px;
+        line-height: 150px;
+      }
+    }
+
+    &>h4 {
+      font-size: 22px;
+      line-height: 30px;
+      color: $lilac-color;
+      font-weight: 700;
+
+      @include for-large-up {
+        font-size: 27px;
+        line-height: 45px;
+      }
+    }
+  }
+
+  .btn-more {
+    a {
+      background-color: $red-color;
+      border-radius: 30px;
+      max-width: 380px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 4.265px 34.739px 45.6px 11.4px rgba(199, 42, 32, 0.26);
+    }
+  }
+}

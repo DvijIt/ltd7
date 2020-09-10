@@ -1,0 +1,72 @@
+// Mixins
+@mixin font($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+// Reset
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+// Layout
+body {
+    background: linear-gradient(90deg, $primaryColor 50%, $primaryColor 51%, #ffffff 52%, #ffffff 100%) no-repeat;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1150px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: $cardShadow;
+}
+
+.card-body {
+    border-radius: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    padding: 0 25px;
+    border-radius: 22px;
+    text-decoration: none;
+    box-shadow: $btnShadow;
+    background: $primaryColor;
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

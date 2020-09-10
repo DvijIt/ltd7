@@ -1,0 +1,89 @@
+.company {
+  position: relative;
+  margin-top: 50px;
+  @include for-large-up {
+    margin-top: 115px;
+  }
+
+  &__circles {
+    &-img {
+      position: absolute;
+      left: 0;
+      top: 30%;
+      max-width: 100%;
+    }
+  }
+
+  &__photos {
+    &-photo {
+      img {
+        width: 240px;
+        height: 240px;
+      }
+      .first-name {
+        margin-top: 40px;
+        margin-bottom: 0;
+        font-size: 25px;
+        font-weight: 800;
+      }
+
+      .last-name {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 25px;
+        font-weight: 800;
+      }
+
+      .position {
+        width: 190px;
+        margin: 25px auto 0;
+        padding: 5px 0;
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 0.3px;
+        background-color: $red-color;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  &__accounts {
+    &-account {
+      padding: 0;
+
+      .circle__investor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ebebeb;
+        font-size: 25px;
+        font-weight: 800;
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+        transition: all .4s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      span {
+        color: $red-color;
+      }
+    }
+  }
+
+  &-more {
+    margin-top: 120px;
+    a {
+      background-color: $red-color;
+      border-radius: 30px;
+      max-width: 380px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 4.265px 34.739px 45.6px 11.4px rgba(199, 42, 32, 0.26);
+    }
+  }
+}
