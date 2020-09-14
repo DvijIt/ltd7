@@ -397,6 +397,94 @@
     </div>
   </footer>
 
+  <div class="call_modal">
+    <div class="call-container">
+      <div class="call-logo">
+        <img src="/src/images/Logo-modal.png" alt="logo">
+      </div>
+      <h2 class="call-title">
+        Вы были у нас на сайте 0 минут 31 секунду!
+      </h2>
+      <h3 class="call-subtitle">Не нашли, что искали? Хотите, вам перезвоним за 28 сек?</h3>
+      <div class="call-form">
+        <form action="#">
+          <div class="form-control">
+            <input type="text" name="phone" value="+7">
+            <div class="flag-container">
+              <span class="image-flag iti-flag ru"></span>
+              <img src="src/images/Polygon1.png" alt="flag" class="image-icon">
+            </div>
+            <ul class="country-list">
+              <li class="country preferred active highlight" data-dial-code="+7" data-country-code="ru">
+                <div class="flag-box">
+                  <div class="iti-flag ru"></div>
+                </div><span class="country-name">Russia (Россия)</span><span class="dial-code">+7</span>
+              </li>
+              <li class="country preferred" data-dial-code="+380" data-country-code="ua">
+                <div class="flag-box">
+                  <div class="iti-flag ua"></div>
+                </div><span class="country-name">Ukraine (Україна)</span><span class="dial-code">+380</span>
+              </li>
+              <li class="country preferred" data-dial-code="+375" data-country-code="by">
+                <div class="flag-box">
+                  <div class="iti-flag by"></div>
+                </div><span class="country-name">Belarus (Беларусь)</span><span class="dial-code">+375</span>
+              </li>
+              <li class="country preferred" data-dial-code="+77" data-country-code="kz">
+                <div class="flag-box">
+                  <div class="iti-flag kz"></div>
+                </div><span class="country-name">Kazakhstan (Казахстан)</span><span class="dial-code">+77</span>
+              </li>
+            </ul>
+          </div>
+          <div class="form-control">
+            <button type="submit"><img src="src/images/phone-modal-btn.png" alt=""> Жду звонка</button>
+          </div>
+        </form>
+      </div>
+      <div class="call-later"><span>Позвоните мне позже</span></div>
+      <div class="call-policy"><span>Нажимая на кнопку «Жду звонка», Вы даете согласие на обработку своих персональных
+          данных.</span></div>
+      <span class="call-close"><img src="src/images/Cross-modal.png" alt="cross"></span>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const call_modal = document.querySelector('.call_modal');
+
+      setTimeout(()=> {
+        call_modal.classList.add('open')
+      }, 30000)
+
+      const flag_container = document.querySelector('.flag-container')
+      const country_list = document.querySelector('.country-list')
+      const image_frag = document.querySelector('.image-flag')
+      const input_phone = document.querySelector('input[name="phone"]')
+      const btn_close = document.querySelector('.call-close')
+
+      
+      flag_container.addEventListener('click', function() {
+        this.classList.toggle('open')
+        country_list.classList.toggle('open')
+      })
+
+      const country_list_items = [...document.querySelectorAll('.country-list li.country')]
+      country_list_items.forEach(el => {
+        el.addEventListener('click', function() {
+          image_frag.classList.remove('ru', 'ua', 'by', 'kz')
+          const countryCode = this.dataset.countryCode
+          const dialCode = this.dataset.dialCode
+          image_frag.classList.add(countryCode)
+          input_phone.value = dialCode
+        })
+      })
+
+      btn_close.addEventListener('click', function() {
+        call_modal.classList.remove('open')
+      })
+    })
+  </script>
+
 <script src="bundle.js"></script></body>
 
 </html>

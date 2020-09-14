@@ -26,3 +26,9 @@ function setOverlay() {
   overlay.click(onCloseMenuClick);
   $('body').append(overlay);
 }
+
+const toggle_menu_btn = document.querySelector('.header__user-name')
+const toggle_menu = document.querySelector('.user_menu')
+toggle_menu_btn.addEventListener('click', function() {
+  toggle_menu.classList.toggle('open')
+})

@@ -408,6 +408,228 @@ img {
   padding: 8px 25px;
 }
 
+.call_modal {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  background-color: #00000080;
+  z-index: 99999;
+}
+.call-container {
+  width: 320px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-image: url(/src/images/bg-modal.png);
+  padding: 30px 25px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.call-logo {
+  margin-top: 50px;
+}
+.call-title {
+  margin-top: 90px;
+  font-family: Open Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+}
+.call-subtitle {
+  font-family: Open Sans, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.call-form {
+  margin-top: 30px;
+}
+.call-form .form-control {
+  padding: 0;
+  border: none;
+  height: 50px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.call-form .form-control .flag-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.call-form .form-control .flag-container .image-flag {
+  display: block;
+  width: 20px;
+}
+.call-form .form-control .flag-container .image-flag.iti-flag {
+  height: 14px;
+  background-image: url(//cdn.pozvonim.com/callback/static/img/flags.png);
+  background-repeat: no-repeat;
+}
+.call-form .form-control .flag-container .image-flag.iti-flag.ru {
+  background-position: -4295px 0px;
+}
+.call-form .form-control .flag-container .image-flag.iti-flag.ua {
+  background-position: -5175px 0px;
+}
+.call-form .form-control .flag-container .image-flag.iti-flag.by {
+  height: 10px;
+  background-position: -790px 0px;
+}
+.call-form .form-control .flag-container .image-flag.iti-flag.kz {
+  height: 10px;
+  background-position: -2853px 0px;
+}
+.call-form .form-control .flag-container .image-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 6px;
+}
+.call-form .form-control .flag-container.open .image-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.call-form .form-control .country-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-color: #d4d6d9;
+  background-color: #000c;
+  color: #fff;
+  border: 1px solid #0000;
+  max-height: 200px;
+  white-space: nowrap;
+  padding: 5px;
+  z-index: 999;
+}
+.call-form .form-control .country-list li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.call-form .form-control .country-list li:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+.call-form .form-control .country-list li .flag-box {
+  width: 20px;
+}
+.call-form .form-control .country-list li .country-name {
+  white-space: normal;
+  font-size: 12px;
+}
+.call-form .form-control .country-list li .dial-code {
+  color: #999;
+  font-size: 13px;
+}
+.call-form .form-control .country-list li .iti-flag {
+  height: 14px;
+  background-image: url(//cdn.pozvonim.com/callback/static/img/flags.png);
+}
+.call-form .form-control .country-list li .iti-flag.ru {
+  background-position: -4295px 0px;
+}
+.call-form .form-control .country-list li .iti-flag.ua {
+  background-position: -5175px 0px;
+}
+.call-form .form-control .country-list li .iti-flag.by {
+  height: 10px;
+  background-position: -790px 0px;
+}
+.call-form .form-control .country-list li .iti-flag.kz {
+  height: 10px;
+  background-position: -2853px 0px;
+}
+.call-form .form-control .country-list.open {
+  display: block;
+}
+.call-form .form-control input {
+  position: relative;
+  background: #942922;
+  border-radius: 4px;
+  border: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding-left: 53px;
+}
+.call-form .form-control button {
+  background: #26E865;
+  border-radius: 4px;
+  border: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 23px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+}
+.call-form .form-control button img {
+  margin-right: 10px;
+}
+.call-later {
+  text-align: center;
+}
+.call-later span {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #fff;
+  border-bottom: 1px dashed #fff;
+}
+.call-policy {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+.call-close {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+}
+
 body {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 400;
