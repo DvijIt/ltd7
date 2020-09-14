@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+    integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+  <!--Plugin CSS file with desired skin-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
+  <!--jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--Plugin JavaScript file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+  <title>Main</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container-xl">
+      <div class="d-lg-none">
+        <div class="btn-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="registration">
+          <div class="btn_registration" id="btn_registration">
+            <img src="src/images/header/reg_image.png" alt="reg">
+          </div>
+        </div>
+      </div>
+      <div class="row flex-column flex-md-row align-items-center justify-content-md-between align-items-md-center"
+        id="header-top">
+        <div class="header__info">
+          <p class="header__info-phone">8-800-505-02-72</p>
+          <p class="header__info-schedule text-center mb-0">В БУДНИ ДНИ С 10:00 ДО 18:00 ПО МСК</p>
+        </div>
+        <div class="d-flex flex-column d-lg-block header__auth text-center text-uppercase">
+          <a href="http://account.alfa-capital.ltd/profile" class="header__auth-profile">Профиль</a>
+          <a href="http://account.alfa-capital.ltd/" class="header__auth-reg-btn ml-lg-3">Регистрация</a>
+        </div>
+      </div>
+      <div class="row mt-md-2 mt-lg-5 mb-2 pt-lg-3 mx-3">
+        <nav class="nav w-100 justify-content-center flex-column flex-lg-row navigation" id="navigation_menu">
+          <a class="nav-link active" href="/">Главная</a>
+          <a class="nav-link" href="/about/index.html">О компании</a>
+          <a class="nav-link" href="/investors.html">Инвесторам</a>
+          <a class="nav-link" href="/news/index.html">Новости</a>
+          <a class="nav-link" href="/reviews/index.html">Отзывы</a>
+          <a class="nav-link" href="/contacts.html">Контакты</a>
+        </nav>
+      </div>
+      <div class="row flex-column-reverse flex-md-row justify-content-lg-between mt-md-2 mt-lg-5">
+        <div class="col-12 col-lg-6 p-lg-0 header__text">
+          <h1 class="header__text-title text-center text-lg-left">Инвестирование с профессионалами открывают большие
+            <span>возможности для Вас</span></h1>
+          <p class="header__text-descr mt-md-2 mt-lg-5 mb-0 text-center text-lg-left">Мы предлагаем действенные и
+            прибыльные схемы инвестирования, которые
+            были созданы на основе двух компонентов: подробного анализа данных и неоспоримого опыта профессиональных
+            инвесторов. Чтобы присоединиться к успешной команде нужно совсем немного.</p>
+          <div
+            class="d-flex align-items-center justify-content-center justify-content-lg-start header__text-nav mt-md-2 mt-lg-5">
+            <a href="/investors.html" class="open_an_account btn mx-auto d-bloc mx-sm-0 mt-2 mt-lg-0">открыть счет</a>
+            <a href="/about/index.html" class="d-none d-sm-block more-details btn text-uppercase ml-3">подробнее</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 p-0 header__illustration mt-4 mt-lg-0">
+          <div class="row justify-content-around header__illustration-items">
+            <div class="col-5 header__illustration-item animate__animated animate__bounceIn">
+              <p class="name">новатэк</p>
+              <p class="number"><span>₽</span>1 061,40</p>
+            </div>
+            <div class="col-5 header__illustration-item animate__animated animate__bounceIn">
+              <p class="name">apple</p>
+              <p class="number"><span>₽</span>1 061,40</p>
+            </div>
+            <div class="col-5 header__illustration-item mt-2 mt-md-3 animate__animated animate__bounceIn">
+              <p class="name">nvidia</p>
+              <p class="number"><span>₽</span>1 061,40</p>
+            </div>
+          </div>
+          <img class="d-block mx-auto mx-lg-0" src="src/images/header/header_illustr.png" alt="header-illustration">
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- calculator -->
+  <section class="calculator">
+    <div class="container-xl">
+      <div class="block__title">
+        <h2 class="text-center">Калькулятор</h2>
+        <h4 class="text-center col-lg-8 mx-auto p-0">Посчитайте, сколько гарантированно
+          <span>заработаете с нами</span></h4>
+        <p class="calculator__text text-center col-lg-9 mx-auto">Воспользуйтесь калькулятором, чтобы рассчитать свой
+          доход
+          Простая и понятная схема покажет, как скоро вы доберетесь до поставленной цели. Для этого совсем не нужно
+          вникать в сложности и тонкости расчетов или разбираться в непонятном интерфейсе. Все уже сделано за вас.
+          Верный
+          алгоритм всего за несколько кликов покажет вашу прибыль.</p>
+      </div>
+      <div class="calculator__item">
+        <h3 class="calculator__item-title text-center">Подберите для себя выгодный тариф <span>1</span></h3>
+        <p class="calculator__item-text text-center">Сумма вклада, период начислений, срок и возможная прибыль - каждый
+          показатель
+          уникальный для своего тарифа.</p>
+        <div class="row m-0">
+          <div class="calculator__slider">
+            <input name="Plan" type="hidden" value="1">
+            <div class="swiper-wrapper justify-content-between">
+              <div data-plan="1" class="swiper-slide text-center calculator__item-block">
+                <object class="block-image" type="image/svg+xml" data="src/images/calculator/block-coins_1.svg">
+                  <img src="src/images/calculator/block-coins_1.svg" act="kriptovaluta">
+                </object>
+                <h4 class="block-title">Standart</h4>
+                <ul class="block__list p-0">
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">полный срок</p>
+                    <p class="block__list-item-text">3 месяца</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">период начислений</p>
+                    <p class="block__list-item-text">В конце срока</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">мин. сумма</p>
+                    <p class="block__list-item-text min_sum">₽15 000,00</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">макс. сумма</p>
+                    <p class="block__list-item-text">₽57 000,00</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">работа депозита</p>
+                    <p class="block__list-item-text">Календарные дни</p>
+                  </li>
+                </ul>
+                <div class="block-percent">5% <span>5%</span></div>
+                <a href="#" class="block-btn btn">открыть счет</a>
+              </div>
+              <div data-plan="2" class="swiper-slide text-center calculator__item-block">
+                <object class="block-image" type="image/svg+xml" data="src/images/calculator/block-coins_2.svg">
+                  <img src="src/images/calculator/block-coins_2.svg" act="kriptovaluta">
+                </object>
+                <h4 class="block-title">Profesional</h4>
+                <ul class="block__list p-0">
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">полный срок</p>
+                    <p class="block__list-item-text">5 месяцев</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">период начислений</p>
+                    <p class="block__list-item-text">В конце срока</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">мин. сумма</p>
+                    <p class="block__list-item-text min_sum">₽57 000,00</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">макс. сумма</p>
+                    <p class="block__list-item-text">₽144 000,00</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">работа депозита</p>
+                    <p class="block__list-item-text">Календарные дни</p>
+                  </li>
+                </ul>
+                <div class="block-percent">8% <span>8%</span></div>
+                <a href="#" class="block-btn btn">открыть счет</a>
+              </div>
+              <div data-plan="3" class="swiper-slide text-center calculator__item-block">
+                <object class="block-image" type="image/svg+xml" data="src/images/calculator/block-coins_3.svg">
+                  <img src="src/images/calculator/block-coins_3.svg" act="kriptovaluta">
+                </object>
+                <h4 class="block-title">Gold</h4>
+                <ul class="block__list p-0">
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">полный срок</p>
+                    <p class="block__list-item-text">6 месяцев</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">период начислений</p>
+                    <p class="block__list-item-text">В конце срока</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">мин. сумма</p>
+                    <p class="block__list-item-text min_sum">₽144 000,00</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">макс. сумма</p>
+                    <p class="block__list-item-text">₽980 000,00</p>
+                  </li>
+                  <li class="block__list-item">
+                    <p class="block__list-item-label">работа депозита</p>
+                    <p class="block__list-item-text">Календарные дни</p>
+                  </li>
+                </ul>
+                <div class="block-percent">12% <span>12%</span></div>
+                <a href="#" class="block-btn btn">открыть счет</a>
+              </div>
+            </div>
+            <div class="slider__navigation">
+              <div class="arrow arrowLeft"></div>
+              <div class="arrow arrowRight"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row calculator__items-row px-2 p-lg-0">
+        <div class="calculator__item col-12 col-lg-6 mb-5 mb-lg-0 p-0">
+          <h3 class="calculator__item-title text-center">Выберите валюту <span>2</span></h3>
+          <p class="calculator__item-text text-center">Для вас доступны вклады в долларах, рублях или биткоинах. Прибыль
+            вам будет начисляться в этой же выбранной валюте.</p>
+          <div class="row justify-content-center currency__selectors">
+            <div data-currency="1" class="currency__item active">
+              <span>₽</span>
+            </div>
+            <div data-currency="2" class="currency__item mx-md-3">
+              <span>$</span>
+            </div>
+            <div data-currency="3" class="currency__item">
+              <span>Ƀ</span>
+            </div>
+            <input name="currency" value="3" type="hidden">
+          </div>
+        </div>
+        <div class="calculator__item col-12 col-lg-6 mb-5 mb-lg-0 p-0">
+          <h3 class="calculator__item-title text-center">Определитесь с суммой <span>3</span></h3>
+          <p class="calculator__item-text text-center">Логично, что чем больше вы вложите, тем выше будет ваш конечный
+            доход. Инвестирование не для нерешительных, рынок любит тех, кто смелый.</p>
+          <div class="button_range_sum">
+            <input class="the_sum_of_tariffs" type="text" name="Sum" value="15000.00">
+
+            <div class="block_white">
+              <input type="text" class="js-range-slider irs-hidden-input" name="my_range" value="" tabindex="-1"
+                readonly="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- your conditions -->
+  <section class="conditions mt-5 px-2 px-lg-0">
+    <div class="container-xl conditions__container">
+      <h2 class="conditions-title text-center mb-5">Ваши условия инвестирования</h2>
+      <p class="conditions-text text-center col-lg-6 mx-auto mb-0">Отличный выбор. Вы чутко чувствуете рынок и
+        находитесь в эпицентре событий. Так держать!</p>
+      <div class="row mt-md-2 mt-lg-5 align-items-center">
+        <div class="col-12 col-lg-4 text-center pl-lg-5 pr-0 conditions__item">
+          <img src="src/images/conditions/sertificat.png" alt="sectificat">
+        </div>
+        <div class="col-12 col-lg-8 d-flex flex-column flex-lg-row flex-lg-wrap">
+          <div class="col-12 col-lg-6 conditions__item">
+            <ul class="conditions__item-list text-center p-0">
+              <li>
+                <p class="label text-uppercase">тариф</p>
+                <p class="text plan-type" id="nametar">Standart</p>
+              </li>
+              <li>
+                <p class="label text-uppercase">срок</p>
+                <p class="text" id="days">3 месяца</p>
+              </li>
+              <li>
+                <p class="label text-uppercase">сумма</p>
+                <p class="text play-sum" id="summa">₽15000,00</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-6 conditions__item">
+            <ul class="conditions__item-list text-center p-0">
+              <li>
+                <p class="label text-uppercase">доходность</p>
+                <p class="text" id="percents">5%</p>
+              </li>
+              <li>
+                <p class="label text-uppercase">период начислений</p>
+                <p class="text" id="countars">В конце срока</p>
+              </li>
+              <li>
+                <p class="label text-uppercase">чистая прибыль</p>
+                <p class="text" id="profit1">₽600,00</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <ul class="conditions__item-list text-center p-0">
+              <li class="mb-0">
+                <p class="label text-uppercase">итоговая прибыль</p>
+                <p class="text font-size-custom" id="profit">₽15600,00</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a href="http://account.alfa-capital.ltd/profile.html"
+        class="btn-reg btn d-block text-center text-uppercase mx-auto py-3">зарегестрироваться и открыть
+        депозит</a>
+    </div>
+  </section>
+  <!-- profitableness -->
+  <section class="profitableness">
+    <div class="container-xl">
+      <div class="block__title">
+        <h2 class="text-center text-uppercase">Доходность</h2>
+        <h4 class="text-center col-12 col-md-8 px-4 mx-auto">Высокий уровень прибыли <span>по каждому
+            тарифу</span></h4>
+        <p class="text-center col-12 col-md-6 px-4 mx-auto">Мы за точность, поэтому открыто показываем
+          наши результаты. Наши инвесторы всегда в
+          курсе событий</p>
+      </div>
+
+      <div class="row mt-md-2 mt-lg-5">
+        <div class="col-lg-4 col-xl-3 col-md-12 p-0">
+          <ul class="profitableness__list m-0 p-0">
+            <li>
+              <a class="d-flex align-items-center btn active">
+                <img src="src/images/calculator/block-coins_1.svg">Standart</a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center btn">
+                <img src="src/images/calculator/block-coins_2.svg">Profesional</a>
+            <li>
+              <a class="d-flex align-items-center btn">
+                <img src="src/images/calculator/block-coins_3.svg">Gold</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-8 col-md-12">
+          <div class="row profitableness__info active">
+            <div class="col-md-3 text-center">
+              <div class="each_type_num">
+                <p class="label">кол-во инвестиций</p>
+                <p class="text">13 456</p>
+              </div>
+            </div>
+            <div class="col-md-5 text-center">
+              <div class="each_type_num">
+                <p class="label">Объем инвестиций</p>
+                <p class="text">$110 463, 345</p>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="each_type_num">
+                <p class="label">инвестиции сегодня</p>
+                <p class="text">$2 094,21</p>
+              </div>
+            </div>
+          </div>
+          <div class="row profitableness__info">
+            <div class="col-md-3 text-center">
+              <div class="each_type_num">
+                <p class="label">кол-во инвестиций</p>
+                <p class="text">4 6763</p>
+              </div>
+            </div>
+            <div class="col-md-5 text-center">
+              <div class="each_type_num">
+                <p class="label">Объем инвестиций</p>
+                <p class="text">$98 963,87</p>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="each_type_num">
+                <p class="label">инвестиции сегодня</p>
+                <p class="text">$4 294,21</p>
+              </div>
+            </div>
+          </div>
+          <div class="row profitableness__info">
+            <div class="col-md-3 text-center">
+              <div class="each_type_num">
+                <p class="label">кол-во инвестиций</p>
+                <p class="text">7 023</p>
+              </div>
+            </div>
+            <div class="col-md-5 text-center">
+              <div class="each_type_num">
+                <p class="label">Объем инвестиций</p>
+                <p class="text">$178 547 33</p>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="each_type_num">
+                <p class="label">инвестиции сегодня</p>
+                <p class="text">$6 002,39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="profitableness__stats active mt-4">
+            <img src="src/images/profitableness/grafic.png" alt="grafic1">
+          </div>
+          <div class="profitableness__stats mt-4">
+            <img src="src/images/profitableness/grafic2.png" alt="grafic2">
+          </div>
+          <div class="profitableness__stats mt-4">
+            <img src="src/images/profitableness/grafic3.png" alt="grafic3">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row m-0 mt-lg-5 justify-content-center btn-more">
+        <a class="btn px-5" href="http://account.alfa-capital.ltd/profile.html">Начать зарабатывать также</a>
+      </div>
+    </div>
+  </section>
+  <!-- company -->
+  <div class="company">
+    <div class="container-xl p-0">
+      <div class="row justify-content-sm-center m-0 px-2">
+        <div class="col-md-12 col-lg-8 text-center p-0">
+          <div class="block__title">
+            <h2>Компания</h2>
+            <h4>Мы гарантируем высокую прибыль <span>по любому тарифу</span></h1>
+              <p>Именно на этот путь уже давно встала наша команда, и прошла его. Сегодня мы готовы
+                взять вас в качестве попутчиков. Мы поможем вам уйти от ошибок и неудач, оставив только приятные стороны
+                инвестирования: прибыль и уверенность в будущем.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="company__circles d-none d-lg-block">
+        <img class="company__circles-img" src="src/images/company/circles.png">
+      </div>
+
+      <div class="company__photos">
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-4 py-5">
+            <div class="company__photos-photo">
+              <img src="https://ltd7.io/Assets/img/photo_ivan.png">
+              <h4 class="first-name">Иван</h4>
+              <h4 class="last-name">Лавицкий</h4>
+              <p class="position">ФИНАНСОВЫЙ ДИРЕКТОР</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="company__photos-photo">
+              <img src="https://ltd7.io/Assets/img/photo_egor.png">
+              <h4 class="first-name">Егор</h4>
+              <h4 class="last-name">Майнов</h4>
+              <p class="position">ОСНОВАТЕЛЬ</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 py-5">
+            <div class="company__photos-photo">
+              <img src="https://ltd7.io/Assets/img/photo_maria.png">
+              <h4 class="first-name">Мария</h4>
+              <h4 class="last-name">Гаврилина</h4>
+              <p class="position">ГЛАВА HR-ДЕПАРТАМЕНТА</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="company__accounts row text-center justify-content-around">
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0">
+          <div class="circle__investor rounded-circle">
+            <span>Удобный</span> кабинет <br> инвестора
+          </div>
+        </div>
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0">
+          <div class="circle__investor rounded-circle">
+            <span>Быстрый</span> вывод <br> средств
+          </div>
+        </div>
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0">
+          <div class="circle__investor rounded-circle">
+            <span>Низкий</span> порог <br> входа
+          </div>
+        </div>
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0">
+          <div class="circle__investor rounded-circle">
+            <span>Безопасная</span> работа <br> без рисков
+          </div>
+        </div>
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0 mt-lg-5">
+          <div class="circle__investor rounded-circle">
+            <span>24/7</span> поддержка <br> клиентов
+          </div>
+        </div>
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0 mt-lg-5 pt-lg-5">
+          <div class="circle__investor rounded-circle">
+            <span>Высокий</span> уровень <br> команды
+          </div>
+        </div>
+        <div class="company__accounts-account col-12 col-md-4 col-lg-3 mb-3 mb-lg-0 mt-lg-5">
+          <div class="circle__investor rounded-circle">
+            <span>Широкий</span> выбор <br> тарифов
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center btn-more mx-0">
+        <a class="btn px-2 px-sm-5" href="/about/index.html">Узнать о компании больше</a>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- investors -->
+  <section class="investors">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center block__title">
+          <h2>Инвесторам</h2>
+          <h4>Приумножить капитал <span>легко и без проблем</span></h4>
+          <p>Не нужно усложнять себе жизнь и ввязываться в сомнительные предложения от не менее
+            сомнительных “дельцов”. Мы предельно открыто и прозрачно расскажем вам, как работает инвестирование и какие
+            выгоды получают наши
+            клиенты.
+          </p>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="col-12 col-md-6 p-0 pr-lg-5">
+          <div class="investors__block">
+
+            <div class="top d-flex align-items-end justify-content-between">
+              <h4 class="step">1</h4>
+              <img src="src/images/investors/step_main_1.png">
+            </div>
+
+            <h4>Регистрация и выбор тарифа</h4>
+            <p>За пару минут вы создаете для себя аккаунт, где при помощи личного кабинета сможете контролировать свои
+              финансы. Останется только пополнить вклад и наблюдать, как растут ваши доходы.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-md-2 mt-lg-5 pt-5 p-0 pl-lg-5">
+          <div class="investors__block">
+
+            <div class="top d-flex align-items-end justify-content-between">
+              <img src="src/images/investors/step_main_2.png">
+              <h4 class="step">2</h4>
+            </div>
+
+            <h4>Выбор лучших проектов</h4>
+            <p>Наша команда вступает в игру сразу после того, как вы откроете вклад. Мы выбираем наиболее выгодные и
+              прибыльные пути инвестирования и отправляем ваши деньги работать на вас. Распределение суммы на
+              необходимые
+              цели в стратегии — наша работа.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="col-12 col-md-6 p-0 pr-lg-5">
+          <div class="investors__block">
+
+            <div class="top d-flex align-items-end justify-content-between">
+              <h4 class="step">3</h4>
+              <img src="src/images/investors/step_main_3.png">
+            </div>
+
+            <h4>Работа с активами без ошибок</h4>
+            <p>Наша стратегия всегда выигрышная, поскольку для ее выстраивания мы используем не только собственный опыт,
+              но
+              и большое количество данных, предоставленных искусственным интеллектом.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-md-2 mt-lg-5 pt-5 p-0 pl-lg-5">
+          <div class="investors__block">
+
+            <div class="top d-flex align-items-end justify-content-between">
+              <img src="src/images/investors/step_main_4.png">
+              <h4 class="step">4</h4>
+            </div>
+
+            <h4>Начисление вашего дохода</h4>
+            <p>Мы четко следуем договорам с каждым клиентом и своевременно начисляем проценты от инвестиций на ваши
+              счета.
+              Служба поддержки контролирует исполнение обязательств круглосуточно.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="col-12 col-md-6 p-0 pr-lg-5">
+          <div class="investors__block">
+
+            <div class="top d-flex align-items-end justify-content-between">
+              <h4 class="step">5</h4>
+              <img src="src/images/investors/step_main_5.png">
+            </div>
+
+            <h4>Моментальная выплата процентов</h4>
+            <p>Переводим на счета наших инвесторов их проценты. Величина зависит от выбранного тарифа, срока и суммы
+              депозита. Выбирайте наши лучшие предложения.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-md-2 mt-lg-5 pt-5 p-0 pl-lg-5">
+          <div class="investors__block">
+
+            <div class="top d-flex align-items-end justify-content-between">
+              <img src="src/images/investors/step_main_6.png">
+              <h4 class="step">6</h4>
+            </div>
+
+            <h4>Прибыль можно заставить работать</h4>
+            <p>При желании вы всегда можете реинвестировать полученные проценты дохода. Реинвестирование увеличит ваш
+              стартовый портфель, тем самым значительно увеличивая и следующую сумму дивидендов.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center justify-content-center btn-more mx-0">
+        <a class="btn px-2 px-md-5" href="/investors.html">Узнать больше об инвестировании</a>
+      </div>
+    </div>
+  </section>
+  <!-- statistic -->
+  <div class="statistic">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center block__title">
+          <h2>Статистика</h2>
+          <h4>Наша компания живет <span>вместе с вами</span></h4>
+          <p>Вы легко можете понаблюдать за тем, как работают деньги наших клиентов и партнеров в
+            режиме реального
+            времени. У нас прозрачная политика профессионалов: ни один доход не скрывается.</p>
+        </div>
+      </div>
+
+      <div class="statistic__items row justify-content-around text-center">
+        <div class="col-md-6 col-lg-4 pt-md-2 pt-lg-5">
+          <div class="statistic__block">
+            <div class="statistic__block-stats">
+              <span>Сумма Депозитов</span>
+              <h4>235 018,41</h4>
+            </div>
+            <div class="statistic__block-table">
+              <h4 class="title">Новые депозиты</h4>
+              <ul class="statistic__block-table-list">
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Энергетика</span>
+                    <h5>₽10 000,00</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Финансы</span>
+                    <h5>₽182,40</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Финансы</span>
+                    <h5>₽1 000,00</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Драгметалы</span>
+                    <h5>₽52 694,00</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Финансы</span>
+                    <h5>₽ 100</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Финансы</span>
+                    <h5>₽110,00</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Финансы</span>
+                    <h5>₽262,00</h5>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="statistic__block">
+            <div class="statistic__block-stats">
+              <span>Сумма выплат</span>
+              <h4>15 518,54</h4>
+            </div>
+            <div class="statistic__block-table">
+              <h4 class="title">Новые депозиты</h4>
+              <ul class="statistic__block-table-list">
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Qiwi Wallet</span>
+                    <h5>₽300</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Payeer</span>
+                    <h5>₽200</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Perfect Money</span>
+                    <h5>₽150</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Perfect Money</span>
+                    <h5>₽123</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Payeer</span>
+                    <h5>₽100</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Payeer</span>
+                    <h5>₽230</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Payeer</span>
+                    <h5>₽150</h5>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-5">
+          <div class="statistic__block">
+            <div class="statistic__block-stats">
+              <span>Количество инвесторов</span>
+              <h4 data-value="46120">46 120</h4>
+            </div>
+            <div class="statistic__block-table">
+              <h4 class="title">Регистрации</h4>
+              <ul class="statistic__block-table-list">
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Россия</span>
+                    <h5>gavighma</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Россия</span>
+                    <h5>tiktakich</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Украина</span>
+                    <h5>mellkon</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Россия</span>
+                    <h5>mensch</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Россия</span>
+                    <h5>flamestalker</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Узбекистан</span>
+                    <h5>mrlionuz</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="date">03 августа 2020, 19:59</div>
+                  <div class="person">
+                    <span>Беларусь</span>
+                    <h5>375259405112</h5>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center btn-more mx-0">
+        <a class="btn px-2 px-md-5" href="http://account.alfa-capital.ltd/">Стать инвестором</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- feedback -->
+  <div class="feedback">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center block__title">
+          <h2>Отзывы</h2>
+          <h4>Мнение клиентов <span>прежде всего</span></h4>
+          <p>Отзывы — это очень полезная и важная часть работы компании. При помощи обратной связи
+            у нас появляется цель для того, чтобы становиться еще лучше для вас.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-between feedback__comments mx-0">
+        <div class="feedback__comments-count">Комментарии (<span>231</span>)</div>
+        <div class="feedback__comments-auth">
+          <button class="btn"><img src="src/images/feedback/log-in.png" alt="log-in"></button>
+        </div>
+      </div>
+
+      <div class="row flex-nowrap mt-2 feedback__form align-items-center mx-0">
+        <div class="feedback__form-image rounded-circle">
+          <img src="src/images/feedback/avatar.png" alt="avatar">
+        </div>
+        <div class="feedback__form-input ml-2 input-group">
+          <input type="text" placeholder="Введите текст сообщения: ..." class="form-control">
+          <div class="input-group-append">
+            <span class="input-group-text"><img src="src/images/feedback/clip-outline.png" alt="clip"></span>
+            <span class="input-group-text"><img src="src/images/feedback/smile.png" alt="smile"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-md-2 mt-lg-5 pt-2 pt-lg-5 mx-0">
+        <ul class="feedback__comments-list p-0">
+          <li>
+            <div class="card flex-row align-items-start border-0">
+              <img src="src/images/feedback/avatar.png" alt="Card image cap">
+              <div class="card-body p-0 pl-2">
+                <h5 class="card-title pt-1">Имя Фамилия <span>(2 часа назад)</span></h5>
+                <p class="card-text">Текст сообщения</p>
+                <a href="#" class="btn p-0">Ответить +1</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row justify-content-center mt-4 mx-0">
+        <nav class="feedback__pagination">
+          <ul class="pagination justify-content-center">
+            <li class="page-item border-0 active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item border-0"><a class="page-link" href="#">2</a></li>
+            <li class="page-item border-0"><a class="page-link" href="#">3</a></li>
+            <a class="page-link border-0" href="#">Последняя > </a>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="row justify-content-center btn-more mx-0">
+        <a class="btn px-2 px-md-5" href="#">Читать отзывы</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- news -->
+  <div class="news">
+    <div class="container-xl">
+
+      <div class="row justify-content-center mx-0">
+        <div class="col-md-12 col-lg-8 text-center p-0">
+          <div class="block__title">
+            <h2>новости</h2>
+            <h4>Успехи и падения: наши новости<span> расскажут все</span></h4>
+            <p>Мы всегда рады показать, чем на данный момент живет наша компания. Улучшения, нововведения, успешные
+              начинания — все это легко прочесть в разделе “Новости” на нашем сайте. Мы не бездушные роботы, мы живем
+              вместе с вами, развиваемся и стремимся вперед каждый день.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-md-2 mt-lg-5 mx-0">
+        <div class="col-12 col-md-4 p-0">
+          <div class="news__item">
+            <div class="image">
+              <img src="src/images/news/raport.png" alt="raport">
+            </div>
+            <div class="pl-3 pr-5">
+              <a class="title" href="#">
+                <h2 class="my-5">Отчеты о торговле</h2>
+              </a>
+              <p class="text mb-4">Здравствуйте. С 3 августа компания будет предоставлять отчёты по торговле через
+                BINANCE и БКС Брокер.</p>
+              <p class="text mb-0">Каждый инвестор сможет ознакомиться с отчетом и Вы сможете доверять...</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-0">
+          <div class="news__item">
+            <div class="image">
+              <img src="src/images/news/raport.png" alt="raport">
+            </div>
+            <div class="pl-3 pr-5">
+              <a class="title" href="#">
+                <h2 class="my-5">Отчеты о торговле</h2>
+              </a>
+              <p class="text mb-4">Здравствуйте. С 3 августа компания будет предоставлять отчёты по торговле через
+                BINANCE и БКС Брокер.</p>
+              <p class="text mb-0">Каждый инвестор сможет ознакомиться с отчетом и Вы сможете доверять...</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-0">
+          <div class="news__item">
+            <div class="image">
+              <img src="src/images/news/raport.png" alt="raport">
+            </div>
+            <div class="pl-3 pr-5">
+              <a class="title" href="#">
+                <h2 class="my-5">Отчеты о торговле</h2>
+              </a>
+              <p class="text mb-4">Здравствуйте. С 3 августа компания будет предоставлять отчёты по торговле через
+                BINANCE и БКС Брокер.</p>
+              <p class="text mb-0">Каждый инвестор сможет ознакомиться с отчетом и Вы сможете доверять...</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="row justify-content-center btn-more mx-0">
+        <a class="btn px-2 px-md-5" href="/news/index.html">Читать все новости</a>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container-xl">
+
+      <div class="row mt-md-2 mt-lg-5 mb-2 mx-3 d-none d-lg-block">
+        <nav class="nav w-100 justify-content-center navigation">
+          <a class="nav-link active" href="/">Главная</a>
+          <a class="nav-link" href="/about/index.html">О компании</a>
+          <a class="nav-link" href="/investors.html">Инвесторам</a>
+          <a class="nav-link" href="/news/index.html">Новости</a>
+          <a class="nav-link" href="/reviews/index.html">Отзывы</a>
+          <a class="nav-link" href="/contacts.html">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="row justify-content-between mt-md-2 mt-lg-5 mx-0">
+        <div class="col-12 col-md-6 col-lg-4 p-0 justify-content-center text-center">
+          <ul class="footer__list p-0">
+            <li>
+              <p class="label text-uppercase">сумма депозитов</p>
+              <p class="text">$235 018, 41</p>
+            </li>
+            <li>
+              <p class="label text-uppercase">сумма выплат инвесторам</p>
+              <p class="text">$18 222, 81</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 p-0 justify-content-center text-center">
+          <ul class="footer__list p-0">
+            <li>
+              <p class="label text-uppercase">количество инвесторов</p>
+              <p class="text">11 549</p>
+            </li>
+            <li>
+              <p class="label text-uppercase">подпишитесь на соцсети</p>
+              <p class="d-flex justify-content-center">
+                <img class="mx-1" src="src/images/footer/telegram.png" alt="telegram">
+                <img class="mx-1" src="src/images/footer/vk.png" alt="vk">
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row justify-content-center btn-more m-0 mt-4 mx-0">
+        <a class="btn px-2 px-md-5" href="http://account.alfa-capital.ltd/">Начать инвестировать</a>
+      </div>
+
+      <div class="row mt-4 mx-0">
+        <p class="footer__descr">Компания «LTD7» не предоставляет банковские и/или брокерские услуги, а лишь является
+          независимой стороной, принимающей инвестиции для доверительного управления с последующей торговлей активами,
+          перечисленными в выбранном тарифном плане. Брокером для проведения торговых сделок трейдерами компании
+          является ООО «Компания БКС», лицензия №154-04434-100000 от 10.01.2001 на осуществление брокерской
+          деятельности. Вся предоставленная на сайте информация не является публичной офертой, предложением приобрести
+          и/или продать какие-либо финансовые инструменты (в т.ч. акции), а также не призывает к каким-либо действиям.
+          Перед принятием решения пользователь должен самостоятельно или с помощью финансового консультанта оценить
+          различные риски и выгоды, а также определить свою готовность и возможность принять таковые.</p>
+      </div>
+
+      <div class="row mt-4">
+        <div class="footer__bottom-list w-100">
+          <ul class="d-flex flex-column flex-lg-row align-items-center justify-content-around p-0">
+            <li class="mb-4 mb-lg-0">
+              <a href="/amlkyc" class="text-uppercase">aml и kyc политика</a>
+            </li>
+            <li class="mb-4 mb-lg-0">
+              <a href="/notice" class="text-uppercase">уведомление о рисках</a>
+            </li>
+            <li class="mb-4 mb-lg-0">
+              <a href="/policyback" class="text-uppercase">политика возврата средств</a>
+            </li>
+            <li class="mb-4 mb-lg-0">
+              <a href="/policy" class="text-uppercase">политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="call_modal">
+    <div class="call-container">
+      <div class="call-logo">
+        <img src="/src/images/Logo-modal.png" alt="logo">
+      </div>
+      <h2 class="call-title">
+        Вы были у нас на сайте 0 минут 31 секунду!
+      </h2>
+      <h3 class="call-subtitle">Не нашли, что искали? Хотите, вам перезвоним за 28 сек?</h3>
+      <div class="call-form">
+        <form action="#">
+          <div class="form-control">
+            <input type="text" name="phone" value="+7">
+            <div class="flag-container">
+              <span class="image-flag iti-flag ru"></span>
+              <img src="src/images/Polygon1.png" alt="flag" class="image-icon">
+            </div>
+            <ul class="country-list">
+              <li class="country preferred active highlight" data-dial-code="+7" data-country-code="ru">
+                <div class="flag-box">
+                  <div class="iti-flag ru"></div>
+                </div><span class="country-name">Russia (Россия)</span><span class="dial-code">+7</span>
+              </li>
+              <li class="country preferred" data-dial-code="+380" data-country-code="ua">
+                <div class="flag-box">
+                  <div class="iti-flag ua"></div>
+                </div><span class="country-name">Ukraine (Україна)</span><span class="dial-code">+380</span>
+              </li>
+              <li class="country preferred" data-dial-code="+375" data-country-code="by">
+                <div class="flag-box">
+                  <div class="iti-flag by"></div>
+                </div><span class="country-name">Belarus (Беларусь)</span><span class="dial-code">+375</span>
+              </li>
+              <li class="country preferred" data-dial-code="+77" data-country-code="kz">
+                <div class="flag-box">
+                  <div class="iti-flag kz"></div>
+                </div><span class="country-name">Kazakhstan (Казахстан)</span><span class="dial-code">+77</span>
+              </li>
+            </ul>
+          </div>
+          <div class="form-control">
+            <button type="submit"><img src="src/images/phone-modal-btn.png" alt=""> Жду звонка</button>
+          </div>
+        </form>
+      </div>
+      <div class="call-later"><span>Позвоните мне позже</span></div>
+      <div class="call-policy"><span>Нажимая на кнопку «Жду звонка», Вы даете согласие на обработку своих персональных
+          данных.</span></div>
+      <span class="call-close"><img src="src/images/Cross-modal.png" alt="cross"></span>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const call_modal = document.querySelector('.call_modal');
+
+      setTimeout(()=> {
+        call_modal.classList.add('open')
+      }, 30000)
+
+      const flag_container = document.querySelector('.flag-container')
+      const country_list = document.querySelector('.country-list')
+      const image_frag = document.querySelector('.image-flag')
+      const input_phone = document.querySelector('input[name="phone"]')
+      const btn_close = document.querySelector('.call-close')
+
+      
+      flag_container.addEventListener('click', function() {
+        this.classList.toggle('open')
+        country_list.classList.toggle('open')
+      })
+
+      const country_list_items = [...document.querySelectorAll('.country-list li.country')]
+      country_list_items.forEach(el => {
+        el.addEventListener('click', function() {
+          image_frag.classList.remove('ru', 'ua', 'by', 'kz')
+          const countryCode = this.dataset.countryCode
+          const dialCode = this.dataset.dialCode
+          image_frag.classList.add(countryCode)
+          input_phone.value = dialCode
+        })
+      })
+
+      btn_close.addEventListener('click', function() {
+        call_modal.classList.remove('open')
+      })
+    })
+  </script>
+
+</body>
+
+</html>

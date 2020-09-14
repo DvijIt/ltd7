@@ -1,0 +1,87 @@
+<!--include _breadcrumbs.pug-->
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" />
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Список страниц</title>
+  <script>document.createElement("picture");</script>
+  <script src="js/picturefill.js" async></script>
+  <style>
+    /**/
+    body {
+      background-color: #c72a20;
+      color: #ffffff;
+    }
+
+    .pages {
+      padding: 40px 0;
+    }
+
+    .pages__heading {
+      margin: 0 0 36px;
+      font-size: 36px;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    .pages__list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pages__list-sublist {
+      list-style: none;
+    }
+
+    .pages__list-item {}
+
+    .pages__list-item-text {}
+
+    .pages__list-link {
+      color: #ffffff;
+      transition: opacity .3s ease;
+    }
+
+    .pages__list-link:hover,
+    .pages__list-link:focus {
+      outline: none;
+      opacity: .7;
+    }
+  </style>
+</head>
+
+<body class="webpage">
+  <!--div(style="display: none")
+    include ../../../build/img/sprite.svg
+    
+    -->
+  <main>
+    <section class="pages">
+      <div class="container">
+        <h1 class="pages__heading heading">Список страниц </h1>
+        <ul class="pages__list">
+          <li class="pages__list-item">
+            <a class="pages__list-link" href="profile.html">Профиль</a>
+          </li>
+          <li class="pages__list-item">
+            <a class="pages__list-link" href="invest.html">Инвестиции </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--script(src="../js/vendor/jquery-ui.min.js")-->
+  <!--script(src="../js/vendor/swiper-bundle.min.js")-->
+  <script src="../js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" />
+  <!--Plugin CSS file with desired skin-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
+  <!--jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--Plugin JavaScript file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+  <title>Investors</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header investors__header">
+    <div class="container-xl">
+      <div class="d-lg-none">
+        <div class="btn-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="registration">
+          <div class="btn_registration" id="btn_registration">
+            <img src="src/images/header/reg_image.png" alt="reg">
+          </div>
+        </div>
+      </div>
+      <div class="row flex-column flex-md-row align-items-center justify-content-md-between align-items-md-center"
+        id="header-top">
+        <div class="header__info">
+          <p class="header__info-phone">8-800-505-02-72</p>
+          <p class="header__info-schedule text-center mb-0">В БУДНИ ДНИ С 10:00 ДО 18:00 ПО МСК</p>
+        </div>
+        <div class="d-flex flex-column d-lg-block header__auth text-center text-uppercase">
+          <a href="http://account.alfa-capital.ltd/profile" class="header__auth-profile">Профиль</a>
+          <a href="http://account.alfa-capital.ltd/" class="header__auth-reg-btn ml-lg-3">Регистрация</a>
+        </div>
+      </div>
+      <div class="row mt-md-2 mt-lg-5 mb-2 pt-lg-3 mx-3">
+        <nav class="nav w-100 justify-content-center flex-column flex-lg-row navigation" id="navigation_menu">
+          <a class="nav-link" href="/">Главная</a>
+          <a class="nav-link" href="/about/index.html">О компании</a>
+          <a class="nav-link active" href="/investors.html">Инвесторам</a>
+          <a class="nav-link" href="/news/index.html">Новости</a>
+          <a class="nav-link" href="/reviews/index.html">Отзывы</a>
+          <a class="nav-link" href="/contacts.html">Контакты</a>
+        </nav>
+      </div>
+      <div class="row flex-column-reverse flex-md-row justify-content-lg-between mt-md-2 mt-lg-5">
+        <div class="col-12 col-lg-6 p-lg-0 header__text">
+          <h1 class="header__text-title text-center text-lg-left">Станьте успешным инвестором <br>
+            <span>с нашей компанией</span></h1>
+          <p class="header__text-descr mt-md-2 mt-lg-5 mb-0 text-center text-lg-left">Мы предлагаем действенные и
+            прибыльные схемы инвестирования, которые
+            были созданы на основе двух компонентов: подробного анализа данных и неоспоримого опыта профессиональных
+            инвесторов. Чтобы присоединиться к успешной команде нужно совсем немного.</p>
+          <div
+            class="d-flex align-items-center justify-content-center justify-content-lg-start header__text-nav mt-md-2 mt-lg-5">
+            <a href="http://account.alfa-capital.ltd/" class="open_an_account btn mx-auto d-bloc mx-sm-0 mt-2 mt-lg-0">открыть счет</a>
+            <a href="/about/index.html" class="d-none d-sm-block more-details btn text-uppercase ml-3">подробнее</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 p-0 header__illustration mt-4 mt-lg-0">
+          <img class="d-block mx-auto mx-lg-0" src="src/images/investors_page/investors_illustr.png"
+            alt="investors-illustration">
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- statistic -->
+  <div class="investors__statistic">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8 text-center">
+          <div class="block__title">
+            <h2>Статистика</h2>
+            <h4>Всегда актуальная информация <span>о депозитах, прибыли и инвесторах</span></h4>
+            <p>Ежесекундно мы собираем терабайты данных, чтобы предоставить их для базы данных в виде простых чисел.
+              Благодаря этому мы всегда готовы предоставить актуальную информацию о компании с точностью до сотой доли
+              процента.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row main_stats">
+        <div class="col-md-4 text-center">
+          <div class="type_of_stats">
+            <h3>Сумма <br>депозитов</h3>
+            <p class="numbers">$176 529,65</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="type_of_stats">
+            <h3>Объем <br>дивидендов</h3>
+            <p class="numbers">$13 804,16</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="type_of_stats">
+            <h3>Количество <br>инвесторов</h3>
+            <p class="numbers">11 773</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- calculator -->
+  <div class="investors__calculator">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8 text-center">
+          <div class="block__title">
+            <h2>Калькулятор</h2>
+            <h4>Рассчитайте доход <span>легко и быстро</span></h4>
+            <p>Подбирайте оптимальные варианты инвестиций среди предоставленных нами. Для каждого предложения работает
+              удобный калькулятор доходности.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-between">
+
+          <div class="col mt-4">
+            <div class="block_selectors">
+
+              <div class="text-center">
+                <h2 class="title">Выбирайте свой тариф</h2>
+                <p class="text_under mt-4">Для каждого тарифа предполагается свой уровень доходов. Он зависит от суммы
+                  вклада, срока и периода начисления процентов. </p>
+              </div>
+
+              <div class="row buttons_block plans_selectors mt-5">
+                <input name="Plan" type="hidden" value="1">
+                <div class="col-md-4 col-sm-4">
+                  <div data-plan="1" class="button_currenncy active">
+                    <img class="num img_under" src="src/images/investors_page/block-coins_1.png">
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <div data-plan="2" class="button_currenncy">
+                    <img class="num img_under" src="src/images/investors_page/block-coins_2.png">
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <div data-plan="3" class="button_currenncy">
+                    <img class="num img_under" src="src/images/investors_page/block-coins_3.png">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-end">
+            <div class="block_selectors">
+
+              <div class="text-center">
+                <h2 class="title">Определите сумму вклада</h2>
+                <p class="text_under">Математика очень простая: чем больше ваш вклад, тем выше будет доход. Не стоит
+                  бояться, рынок инвестирования любит тех, кто решается на большее.</p>
+              </div>
+
+              <div class="button_range_sum">
+                <input class="the_sum_of_tariffs" type="text" name="Sum" value="15000.00">
+
+                <div class="block_white">
+                  <input type="text" class="js-range-slider irs-hidden-input" name="my_range" value="" tabindex="-1"
+                    readonly="">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <div class="block_equel">
+
+            <div class="block_selectors">
+
+              <div class="row justify-content-center currency__selectors">
+                <div data-currency="1" class="currency__item active">
+                  <span>₽</span>
+                </div>
+                <div data-currency="2" class="currency__item mx-md-3">
+                  <span>$</span>
+                </div>
+                <div data-currency="3" class="currency__item">
+                  <span>Ƀ</span>
+                </div>
+                <input name="currency" value="3" type="hidden">
+              </div>
+            </div>
+
+
+            <div class="total_sum text-center mt-5">
+              <h3 class="mb-0">Итоговая прибыль</h3>
+              <p class="mt-4" id="profit">₽15600,00</p>
+            </div>
+
+            <div class="info_tar">
+
+              <div class="select_val text-center">
+                <h3 class="bg_name mb-0 nametar">Stardart</h3>
+                <div>
+                  <h5 class="type mb-0">тариф</h5>
+                  <h2 class="mb-0 nametar">Stardart</h2>
+                </div>
+              </div>
+
+              <div class="select_list row no-gutters justify-content-center text-center mt-5">
+                <div class="col-6 mb-3">
+                  <span class="text-uppercase">тариф</span>
+                  <h3 id="nametar">Stardart</h3>
+                </div>
+                <div class="col-6 mb-3">
+                  <span class="text-uppercase">доходность</span>
+                  <h3 id="percents">5%</h3>
+                </div>
+                <div class="col-6 mb-3">
+                  <span class="text-uppercase">срок</span>
+                  <h3 id="days">3 месяца</h3>
+                </div>
+                <div class="col-6 mb-3">
+                  <span class="text-uppercase">период начисления</span>
+                  <h3 id="countars">В конце срока</h3>
+                </div>
+                <div class="col-12 col-sm-6 mb-3">
+                  <span class="text-uppercase">сумма</span>
+                  <h3 id="summa">₽15000,00</h3>
+                </div>
+                <div class="col-12 col-sm-6 mb-3">
+                  <span class="text-uppercase">чистая прибыль</span>
+                  <h3 id="profit1">₽600,00</h3>
+                </div>
+              </div>
+
+              <div class="text-center btn-more">
+                <a class="btn px-5" href="http://account.alfa-capital.ltd/">Инвестировать</a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- map -->
+  <div class="investors__map">
+    <div class="container-xl">
+
+      <div class="row no-gutters justify-content-center">
+        <div class="col-md-12 col-lg-10 text-center">
+          <div class="block__title">
+            <h2>Этапы</h2>
+            <h4>Как работает механизм от регистрации <span>до получения прибыли</span></h4>
+            <p>Мы покажем вам подробности работы нашей компании по инвестированию. Для каждого пункта мы выбираем
+              особый подход, которые приносит самые высокие результаты.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+
+        <div class="map">
+
+          <div class="row each_block justify-content-between">
+            <div class="col-sm-5 mt-sm-3 pr-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">1</div>
+                  <img src="src/images/investors_page/map_image_1.png">
+                </div>
+                <div class="text">
+                  <h4>Регистрация <br>нового Инвестора</h4>
+                  <p>Простая и понятная регистрация — это первый шаг инвестора к успеху. Сразу после регистрации новый
+                    клиент вносит депозит и начинает зарабатывать.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 pl-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">2</div>
+                  <img src="src/images/investors_page/map_image_2.png">
+                </div>
+                <div class="text">
+                  <h4>Изучение <br>тенденций рынка</h4>
+                  <p>Мы активно следим за любыми изменениями во всех направлениях инвестирования. Это позволяет нам
+                    контролировать процесс развития рынка и выстраивать самые верные стратегии в работе.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row each_block justify-content-between">
+
+            <div class="col-sm-5 mt-sm-3 pr-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">3</div>
+                  <img src="src/images/investors_page/map_image_4.png">
+                </div>
+                <div class="text">
+                  <h4>Выявление <br>рисков</h4>
+                  <p>Анализ динамики цен и состояния экономики — лучший способ определить верный момент для
+                    инвестирования.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 pl-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">4</div>
+                  <img src="src/images/investors_page/map_image_3.png">
+                </div>
+                <div class="text">
+                  <h4>Формирование <br>портфеля</h4>
+                  <p>Мы не ограничиваемся только одним направлением в инвестировании. Вариантов доходов существует масса
+                    и мы активно пользуемся каждым из них.</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row each_block justify-content-between">
+            <div class="col-sm-5 mt-sm-3 pr-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">5</div>
+                  <img src="src/images/investors_page/map_image_5.png">
+                </div>
+                <div class="text">
+                  <h4>Заключение <br>договоров</h4>
+                  <p>Каждая инвестиция фиксируется на юридическом уровне, благодаря чему она надежно защищена. Мы
+                    работаем только с проверенными временем партнерами.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 pl-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">6</div>
+                  <img src="src/images/investors_page/map_image_6.png">
+                </div>
+                <div class="text">
+                  <h4>Мониторинг <br>вкладов</h4>
+                  <p>Наша современная система мониторинга состоит из сложных этапов. Профессиональные аналитики помогают
+                    избежать даже минимальных рисков.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row each_block justify-content-between">
+
+            <div class="col-sm-5 mt-sm-3 pr-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">7</div>
+                  <img src="src/images/investors_page/map_image_7.png">
+                </div>
+                <div class="text">
+                  <h4>Отслеживание <br>в динамике</h4>
+                  <p>Мы внимательно наблюдаем за состоянием рынка, и в случае появления рисков, меняем направление на
+                    другое, которое является более стабильным.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-sm-5 pl-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">8</div>
+                  <img src="src/images/investors_page/map_image_8.png">
+                </div>
+                <div class="text">
+                  <h4>Получение <br>дохода</h4>
+                  <p>В соответствии с составленными договорами, на каждый счет поступают дивиденды от любой инвестиции.
+                    Наша служба поддержки круглосуточно контролирует выполнение этих обязательств. </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row each_block justify-content-between">
+            <div class="col-sm-5 mt-sm-3 pr-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top">
+                  <div class="bg">9</div>
+                  <img src="src/images/investors_page/map_image_9.png">
+                </div>
+                <div class="text">
+                  <h4>Моментальные <br>выплаты</h4>
+                  <p>Переводим на счета наших
+                    инвесторов их прибыль.
+                    У нас нет задержек,
+                    все средства поступают
+                    согласно регламенту.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 pl-sm-5">
+              <div class="row align-items-center step_block">
+                <div class="top last-top">
+                  <div class="bg">10</div>
+                  <img src="src/images/investors_page/map_image_10.png">
+                </div>
+                <div class="text">
+                  <h4>Завоевание <br>доверия</h4>
+                  <p>Большинство наших
+                    клиентов не выводят
+                    полученную прибыль,
+                    а реинвестируют ее,
+                    увеличивая портфель
+                    в геометрической
+                    прогрессии.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row text-center justify-content-center btn-more">
+        <a class="btn px-5" href="http://account.alfa-capital.ltd/">Хочу начать зарабатывать</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- tarifs -->
+  <div class="investors__tariffs">
+    <div class="container-xl investors__tariffs-block">
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="block__title">
+            <h2>Тарифы</h2>
+            <h4> Почему стоит <span>инвестировать с нами</span></h4>
+            <p>Подберите наиболее привлекательное направление для вложений, а мы сделаем все, чтобы ваши инвестиции
+              принесли максимум прибыли
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide_block justify-content-center align-items-center">
+
+        <div class="row">
+          <div class="swiper-container investors-slider">
+            <div class="swiper-wrapper align-items-center">
+
+              <div data-plan="1" class="swiper-slide d-flex justify-content-center">
+                <div class="each_ico">
+                  <input type="hidden" name="time" value="3 месяца">
+                  <input type="hidden" name="percents" value="5%">
+                  <img class="type_tar" src="src/images/investors_page/block-coins_1.png">
+                </div>
+              </div>
+              <div data-plan="2" class="swiper-slide d-flex justify-content-center">
+                <div class="each_ico">
+                  <input type="hidden" name="time" value="5 месяцев">
+                  <input type="hidden" name="percents" value="8%">
+                  <img class="type_tar" src="src/images/investors_page/block-coins_2.png">
+                </div>
+              </div>
+              <div data-plan="3" class="swiper-slide d-flex justify-content-center">
+                <div class="each_ico">
+                  <input type="hidden" name="time" value="6 месяцев">
+                  <input type="hidden" name="percents" value="12%">
+                  <img class="type_tar" src="src/images/investors_page/block-coins_3.png">
+                </div>
+              </div>
+            </div>
+            <div class="investors-button-prev">
+              <img src="src/images/investors_page/investors-button-prev.png" />
+            </div>
+            <div class="investors-button-next">
+              <img src="src/images/investors_page/investors-button-next.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="below-info">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-5">
+            <div class="text-center">
+              <img class="img_cert" src="src/images/conditions/sertificat.png">
+            </div>
+          </div>
+
+          <div class="col-sm-12 block_info col-md-7 mt-5">
+            <div class="row">
+              <div class="col-6 col-md-6 col-sm-6 mb-4">
+                <div class="section_selected">
+                  <span>тариф</span>
+                  <h3 class="nametar">Финансы</h3>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-sm-6 mb-4">
+                <div class="section_selected">
+                  <span>доходность</span>
+                  <h3 class="percents">5%</h3>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-sm-6 mb-4">
+                <div class="section_selected">
+                  <span>срок</span>
+                  <h3 class="days">3 месяца</h3>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-sm-6 mb-4">
+                <div class="section_selected">
+                  <span>период начислений</span>
+                  <h3 class="countars">В конце срока</h3>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-sm-6 mb-4">
+                <div class="section_selected">
+                  <span>мин.сумма</span>
+                  <h3 class="min_sum">₽15000,00</h3>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-sm-6 mb-4">
+                <div class="section_selected">
+                  <span>чистая прибыль</span>
+                  <h3 class="profit1">₽600,00</h3>
+                </div>
+              </div>
+            </div>
+            <div class="row btn-more mt-0 justify-content-center">
+              <a class="btn px-5" href="#">Инвестировать</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-sm-12 text-center px-2 px-md-5">
+            <p class="short_info mb-0">Мы предлагаем действенные и прибыльные схемы инвестирования, которые были созданы
+              на
+              основе двух компонентов: подробного анализа данных, совершенного искусственным интеллектом и
+              неоспоримого опыта профессиональных инвесторов. Чтобы присоединится к успешной команде нужно совсем
+              немного.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center pluses-minuses">
+          <div class="col-lg-10 col-sm-12 col-md-12">
+            <div class="row justify-content-between">
+              <div class="col-lg-6">
+
+                <div class="top_title text-center">
+                  <div class="bg">Плюсы</div>
+                  <h3 class="text">Плюсы</h3>
+                </div>
+
+                <ul class="pluses p-0">
+                  <li>
+                    <span>Внешний вид металлов не портится со временем, как и свойства. Это обеспечивает
+                      стабильность цены на долгие годы.</span>
+                  </li>
+                  <li>
+                    <span>Ликвидность благородных металлов высокая в любой ситуации. Даже во время войн, когда
+                      обесценивается рынок акций и фондовых вложений.</span>
+                  </li>
+                  <li>
+                    <span>Внешний вид металлов не портится со временем, как и свойства. Это обеспечивает
+                      стабильность цены на долгие годы.</span>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+
+                <div class="top_title text-center">
+                  <div class="bg">Минусы</div>
+                  <h3 class="text">Минусы</h3>
+                </div>
+
+                <ul class="minuses p-0">
+                  <li>
+                    <span>Повышенная чуткость реагирования на монетарную политику ФРС США.</span>
+                  </li>
+                  <li>
+                    <span>Обложение налогами покупки и продажи, а также других операций с драгоценными металлами на
+                      территории России.</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center btn-more">
+          <a class="btn px-5" href="http://account.alfa-capital.ltd/">Инвестировать в
+            <span>Драгметаллы</span></a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- bests -->
+  <div class="investors__bests">
+    <div class="container-xl">
+
+      <div class="row no-gutters justify-content-center">
+        <div class="col-md-12 col-lg-8 text-center p-0">
+          <div class="block__title">
+            <h2>Лучшие</h2>
+            <h4> Почему стоит <span>выбрать нас</span></h4>
+            <p>Для нашей команды каждый новый инвестор — прежде всего человек, с которым мы планируем продуктивно
+              работать. Потому, планируя бизнес-процессы, мы делали упор на хорошие человеческие отношения. Именно за
+              такой подход нашу команду любят и ценят в мире инвестирования.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 pt-0 pt-md-4 justify-content-between">
+        <div class="col-md-6 col-sm-12 pl-xl-0">
+          <div class="oport_block text-center">
+            <img class="img_bg" src="src/images/investors_page/oportu_1.png">
+            <div>
+              <h3>Быстрая техническая <br>поддержка</h3>
+              <p>Быстрая и грамотная техническая поддержка готова помочь в любое время суток.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 pr-xl-0">
+          <div class="oport_block text-center">
+            <img class="img_bg" src="src/images/investors_page/oportu_2.png">
+            <div>
+              <h3>Стабильные выплаты <br>процентов</h3>
+              <p>Стабильные выплаты дивидендов без малейших задержек точно в срок.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 pl-xl-0">
+          <div class="oport_block text-center">
+            <img class="img_bg" src="src/images/investors_page/oportu_3.png">
+            <div>
+              <h3>Вывод средств <br>до 24 часов</h3>
+              <p>Система вывода до 24х часов в любое время суток в том числе и праздничные дни.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 pr-xl-0">
+          <div class="oport_block text-center">
+            <img class="img_bg" src="src/images/investors_page/oportu_4.png">
+            <div>
+              <h3>Лучшие <br>проверенные активы</h3>
+              <p>Команда профессионалов, которая подбирает лучшие пути инвестирования. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center row justify-content-center btn-more">
+        <a class="btn px-5" href="http://account.alfa-capital.ltd/">Стать инвестором</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- start -->
+  <div class="investors__start">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8 text-center px-0">
+          <div class="block__title">
+            <h2>Старт</h2>
+            <h4>Присоединяйтесь <span>уже сегодня</span></h4>
+            <p>Нет ничего проще чем начать зарабатывать с нашей помощью. Мы вложили немало своих сил и еще больше
+              времени, чтобы сделать интерфейс платформы максимально дружелюбным и понятным. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 pt-md-4">
+
+        <div class="col-md-4 col-sm-12 mt-4 mt-md-0">
+          <div class="step text-center">
+            <img src="src/images/investors_page/step_num_1.png">
+            <h4>Создайте <br>аккаунт</h4>
+            <p>Регистрируйтесь и получайте доступ к личному кабинету, где показаны все движения вашего вклада. Здесь же
+              у вас будет доступ к личному счету.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 mt-4 mt-5">
+          <div class="step text-center">
+            <img src="src/images/investors_page/step_num_2.png">
+            <h4>Выберите <br>тариф</h4>
+            <p>Мы разработали семь различных планов для инвестиций, вам нужно только выбрать самый удобный. </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 mt-4 mt-md-0">
+          <div class="step text-center">
+            <img src="src/images/investors_page/step_num_3.png">
+            <h4>Внесите <br>средства</h4>
+            <p>Как только вы пополните депозит, мы направим ваши деньги работать на прибыль. А вам остается только
+              наблюдать за ростом собственных активов. </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row text-center justify-content-center quote">
+
+        <div class="col-md-10 px-0">
+          <h2 class="px-4 m-0 px-0">
+            <span>Самое лучшее время инвестировать — вчера.</span>
+            Можно начать и сегодня. Чем раньше вы начнете инвестировать, тем лучше.</h2>
+          <h6>Слова Уоррен Баффетт, американского предпринимателя и крупнейшего в мире инвестора.</h6>
+        </div>
+
+      </div>
+
+      <div class="row justify-content-center btn-more">
+        <a class="btn px-5" href="http://account.alfa-capital.ltd/">Начать сейчас</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer investors__footer">
+    <div class="container-xl">
+
+      <div class="row mt-md-2 mt-lg-5 mb-2 mx-3 d-none d-lg-block">
+        <nav class="nav w-100 justify-content-center navigation">
+          <a class="nav-link" href="/">Главная</a>
+          <a class="nav-link" href="/about/index.html">О компании</a>
+          <a class="nav-link active" href="/investors.html">Инвесторам</a>
+          <a class="nav-link" href="/news/index.html">Новости</a>
+          <a class="nav-link" href="/reviews/index.html">Отзывы</a>
+          <a class="nav-link" href="/contacts.html">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="row justify-content-between mt-md-2 mt-lg-5 mx-0">
+        <div class="col-12 col-md-6 col-lg-4 p-0 justify-content-center text-center">
+          <ul class="footer__list p-0">
+            <li>
+              <p class="label text-uppercase">сумма депозитов</p>
+              <p class="text">$235 018, 41</p>
+            </li>
+            <li>
+              <p class="label text-uppercase">сумма выплат инвесторам</p>
+              <p class="text">$18 222, 81</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 p-0 justify-content-center text-center">
+          <ul class="footer__list p-0">
+            <li>
+              <p class="label text-uppercase">количество инвесторов</p>
+              <p class="text">11 549</p>
+            </li>
+            <li>
+              <p class="label text-uppercase">подпишитесь на соцсети</p>
+              <p class="d-flex justify-content-center">
+                <img class="mx-1" src="src/images/footer/telegram.png" alt="telegram">
+                <img class="mx-1" src="src/images/footer/vk.png" alt="vk">
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row justify-content-center btn-more m-0 mt-4 mx-0">
+        <a class="btn px-2 px-md-5" href="http://account.alfa-capital.ltd/">Начать инвестировать</a>
+      </div>
+
+      <div class="row mt-4 mx-0">
+        <p class="footer__descr">Компания «LTD7» не предоставляет банковские и/или брокерские услуги, а лишь является
+          независимой стороной, принимающей инвестиции для доверительного управления с последующей торговлей активами,
+          перечисленными в выбранном тарифном плане. Брокером для проведения торговых сделок трейдерами компании
+          является ООО «Компания БКС», лицензия №154-04434-100000 от 10.01.2001 на осуществление брокерской
+          деятельности. Вся предоставленная на сайте информация не является публичной офертой, предложением приобрести
+          и/или продать какие-либо финансовые инструменты (в т.ч. акции), а также не призывает к каким-либо действиям.
+          Перед принятием решения пользователь должен самостоятельно или с помощью финансового консультанта оценить
+          различные риски и выгоды, а также определить свою готовность и возможность принять таковые.</p>
+      </div>
+
+      <div class="row mt-4">
+        <div class="footer__bottom-list w-100">
+          <ul class="d-flex flex-column flex-lg-row align-items-center justify-content-around p-0">
+            <li class="mb-4 mb-lg-0">
+              <a href="/amlkyc" class="text-uppercase">aml и kyc политика</a>
+            </li>
+            <li class="mb-4 mb-lg-0">
+              <a href="/notice" class="text-uppercase">уведомление о рисках</a>
+            </li>
+            <li class="mb-4 mb-lg-0">
+              <a href="/policyback" class="text-uppercase">политика возврата средств</a>
+            </li>
+            <li class="mb-4 mb-lg-0">
+              <a href="/policy" class="text-uppercase">политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="call_modal">
+    <div class="call-container">
+      <div class="call-logo">
+        <img src="/src/images/Logo-modal.png" alt="logo">
+      </div>
+      <h2 class="call-title">
+        Вы были у нас на сайте 0 минут 31 секунду!
+      </h2>
+      <h3 class="call-subtitle">Не нашли, что искали? Хотите, вам перезвоним за 28 сек?</h3>
+      <div class="call-form">
+        <form action="#">
+          <div class="form-control">
+            <input type="text" name="phone" value="+7">
+            <div class="flag-container">
+              <span class="image-flag iti-flag ru"></span>
+              <img src="src/images/Polygon1.png" alt="flag" class="image-icon">
+            </div>
+            <ul class="country-list">
+              <li class="country preferred active highlight" data-dial-code="+7" data-country-code="ru">
+                <div class="flag-box">
+                  <div class="iti-flag ru"></div>
+                </div><span class="country-name">Russia (Россия)</span><span class="dial-code">+7</span>
+              </li>
+              <li class="country preferred" data-dial-code="+380" data-country-code="ua">
+                <div class="flag-box">
+                  <div class="iti-flag ua"></div>
+                </div><span class="country-name">Ukraine (Україна)</span><span class="dial-code">+380</span>
+              </li>
+              <li class="country preferred" data-dial-code="+375" data-country-code="by">
+                <div class="flag-box">
+                  <div class="iti-flag by"></div>
+                </div><span class="country-name">Belarus (Беларусь)</span><span class="dial-code">+375</span>
+              </li>
+              <li class="country preferred" data-dial-code="+77" data-country-code="kz">
+                <div class="flag-box">
+                  <div class="iti-flag kz"></div>
+                </div><span class="country-name">Kazakhstan (Казахстан)</span><span class="dial-code">+77</span>
+              </li>
+            </ul>
+          </div>
+          <div class="form-control">
+            <button type="submit"><img src="src/images/phone-modal-btn.png" alt=""> Жду звонка</button>
+          </div>
+        </form>
+      </div>
+      <div class="call-later"><span>Позвоните мне позже</span></div>
+      <div class="call-policy"><span>Нажимая на кнопку «Жду звонка», Вы даете согласие на обработку своих персональных
+          данных.</span></div>
+      <span class="call-close"><img src="src/images/Cross-modal.png" alt="cross"></span>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const call_modal = document.querySelector('.call_modal');
+
+      setTimeout(()=> {
+        call_modal.classList.add('open')
+      }, 30000)
+
+      const flag_container = document.querySelector('.flag-container')
+      const country_list = document.querySelector('.country-list')
+      const image_frag = document.querySelector('.image-flag')
+      const input_phone = document.querySelector('input[name="phone"]')
+      const btn_close = document.querySelector('.call-close')
+
+      
+      flag_container.addEventListener('click', function() {
+        this.classList.toggle('open')
+        country_list.classList.toggle('open')
+      })
+
+      const country_list_items = [...document.querySelectorAll('.country-list li.country')]
+      country_list_items.forEach(el => {
+        el.addEventListener('click', function() {
+          image_frag.classList.remove('ru', 'ua', 'by', 'kz')
+          const countryCode = this.dataset.countryCode
+          const dialCode = this.dataset.dialCode
+          image_frag.classList.add(countryCode)
+          input_phone.value = dialCode
+        })
+      })
+
+      btn_close.addEventListener('click', function() {
+        call_modal.classList.remove('open')
+      })
+    })
+  </script>
+</body>
+
+</html>

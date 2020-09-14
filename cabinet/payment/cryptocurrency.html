@@ -1,0 +1,165 @@
+<!--include _breadcrumbs.pug-->
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="src/css/main.css">
+  <title>Пополнить</title>
+</head>
+
+<body class="webpage">
+  <main>
+    <div class="cabinet">
+      <div class="cabinet__inner container">
+        <aside class="cabinet__aside aside">
+          <header class="aside__header">
+            <button class="aside__close" type="button">
+              <span class="visually-hidden">Скрыть меню</span>
+            </button>
+            <div class="aside__balance balance">
+              <div class="balance__text">Мой баланс</div>
+              <div class="balance__value">0,00 RUB</div>
+            </div>
+            <ul class="aside__actions account-actions">
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--plus" href="#">
+                  <span class="visually-hidden">Добавить</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--wallet" href="/cabinet/payment/index.html">
+                  <span class="visually-hidden">Пополнить</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--transfer" href="#">
+                  <span class="visually-hidden">Вывести</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--exchange" href="#">
+                  <span class="visually-hidden">Обменять</span>
+                </a>
+              </li>
+            </ul>
+          </header>
+          <nav class="aside__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item navigation__item--current">
+                <a class="navigation__link navigation__link--profile">Профиль</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--profits" href="/cabinet/invest.html">Инвестиции</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--history" href="/cabinet/history/index.html">История</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--support" href="/cabinet/support/index.html">Поддержка</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--team" href="/cabinet/team/index.html">Команда</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--setting" href="/cabinet/settings/index.html">Настройки</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <article class="cabinet__main">
+          <header class="cabinet__header header">
+            <div class="header__top">
+              <button class="header__menu" type="button">
+                <span class="visually-hidden">Показать меню</span>
+              </button>
+              <a class="header__top-btn btn" href="#">Новая инвестиция</a>
+              <div class="header__user">
+                <div class="header__user-name">
+                  <a href="#">loginname123</a>
+                  <div class="user_menu">
+                    <ul>
+                      <li><a href="#">Установка аватара</a></li>
+                      <li><a href="#">Настройки</a></li>
+                      <li class="exit"><a href="#">Выход</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="header__user-toggle" type="button" aria-pressed="false">
+                  <span class="visually-hidden">Действия с аккаунтом</span>L
+                </button>
+              </div>
+            </div>
+            <h1 class="header__heading">Пополнение баланса</h1>
+          </header>
+          <div class="cabinet__content">
+            <section class="cabinet__accounts-board accounts-board">
+              <h2 class="accounts-board__heading heading">Выберите варианты пополнения</h2>
+              <div class="accounts-board-crypto">
+                <div class="accounts-board-crypto-item">
+                  <div class="accounts-board-crypto-item-title">
+                    <img src="/cabinet/payment/src/img/Tetcher40.svg" alt="Tetcher">
+                    <h3>Tetcher ERC-20</h3>
+                  </div>
+                  <div class="accounts-board-crypto-item-body">
+                    <div class="accounts-board-crypto-item-main">
+                      <div class="accounts-board-crypto-item-main-text">Для пополнения баланса с помощью Bitcoin, Вам
+                        необходимо перевести указанную сумму на указанный кошелек (Вы также можете использовать QR-код).
+                        Обычно зачисление занимает не более 30 минут, однако если по какой-то причине денежные средства
+                        не пришли, обратитесь в поддержку, мы обязательно Вам поможем.</div>
+                      <div class="accounts-board-crypto-item-main-requisits">
+                        <div class="accounts-board-crypto-item-main-requisits-item">
+                          <p class="accounts-board-crypto-item-main-requisits-item-title">СУММА</p>
+                          <p class="accounts-board-crypto-item-main-requisits-item-summ">0,00000000 ETC</p>
+                        </div>
+                        <div class="accounts-board-crypto-item-main-requisits-item">
+                          <p class="accounts-board-crypto-item-main-requisits-item-title">РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</p>
+                          <p class="accounts-board-crypto-item-main-requisits-item-summ">39Vk9MvVsL8vDkfkhVYA8YNL8o5HsWN3AY</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accounts-board-crypto-item-aside qr-code">
+                      <img src="/cabinet/payment/src/img/QR-Code.svg" alt="qr-code">
+                    </div>
+                  </div>
+                </div>
+                <div class="accounts-board-crypto-item">
+                  <div class="accounts-board-crypto-item-title">
+                    <img src="/cabinet/payment/src/img/Tetcher40.svg" alt="Tetcher">
+                    <h3>Bitcoin</h3>
+                  </div>
+                  <div class="accounts-board-crypto-item-body">
+                    <div class="accounts-board-crypto-item-main">
+                      <div class="accounts-board-crypto-item-main-text">Для пополнения баланса с помощью Bitcoin, Вам
+                        необходимо перевести указанную сумму на указанный кошелек (Вы также можете использовать QR-код).
+                        Обычно зачисление занимает не более 30 минут, однако если по какой-то причине денежные средства
+                        не пришли, обратитесь в поддержку, мы обязательно Вам поможем.</div>
+                      <div class="accounts-board-crypto-item-main-requisits">
+                        <div class="accounts-board-crypto-item-main-requisits-item">
+                          <p class="accounts-board-crypto-item-main-requisits-item-title">СУММА</p>
+                          <p class="accounts-board-crypto-item-main-requisits-item-summ">0,00000000 ETC</p>
+                        </div>
+                        <div class="accounts-board-crypto-item-main-requisits-item">
+                          <p class="accounts-board-crypto-item-main-requisits-item-title">РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</p>
+                          <p class="accounts-board-crypto-item-main-requisits-item-summ">39Vk9MvVsL8vDkfkhVYA8YNL8o5HsWN3AY</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accounts-board-crypto-item-aside qr-code">
+                      <img src="/cabinet/payment/src/img/QR-Code.svg" alt="qr-code">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!--include _breadcrumbs.pug-->
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" />
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" />
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Инвестиции</title>
+  <script>document.createElement("picture");</script>
+  <script src="js/picturefill.js" async></script>
+</head>
+
+<body class="webpage">
+  <!--div(style="display: none")include ../../../build/img/sprite.svg
+    -->
+  <main>
+    <div class="cabinet">
+      <div class="cabinet__inner container">
+        <aside class="cabinet__aside aside">
+          <header class="aside__header">
+            <button class="aside__close" type="button">
+              <span class="visually-hidden">Скрыть меню</span>
+            </button>
+            <div class="aside__balance balance">
+              <div class="balance__text">Мой баланс</div>
+              <div class="balance__value">0,00 RUB</div>
+            </div>
+            <ul class="aside__actions account-actions">
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--plus" href="#">
+                  <span class="visually-hidden">Добавить</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--wallet" href="#">
+                  <span class="visually-hidden">Пополнить</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--transfer" href="#">
+                  <span class="visually-hidden">Вывести</span>
+                </a>
+              </li>
+              <li class="account-actions__item">
+                <a class="account-actions__btn account-actions__btn--exchange" href="#">
+                  <span class="visually-hidden">Обменять</span>
+                </a>
+              </li>
+            </ul>
+          </header>
+          <nav class="aside__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--profile" href="profile.html">Профиль</a>
+              </li>
+              <li class="navigation__item navigation__item--current">
+                <a class="navigation__link navigation__link--profits">Инвестиции</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--history" href="/cabinet/history/index.html">История</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--support" href="/cabinet/support/index.html">Поддержка</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--team" href="/cabinet/team/index.html">Команда</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--setting" href="/cabinet/settings/index.html">Настройки</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <article class="cabinet__main">
+          <header class="cabinet__header header">
+            <div class="header__top">
+              <button class="header__menu" type="button">
+                <span class="visually-hidden">Показать меню</span>
+              </button>
+              <a class="header__top-btn btn" href="#">Новая инвестиция</a>
+              <button class="header__notifications" type="button" data-count="1">
+                <span class="visually-hidden">Уведомления</span>
+              </button>
+              <div class="header__user">
+                <div class="header__user-name">
+                  <a href="#">loginname123</a>
+                  <div class="user_menu">
+                    <ul>
+                      <li><a href="#">Установка аватара</a></li>
+                      <li><a href="#">Настройки</a></li>
+                      <li class="exit"><a href="#">Выход</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="header__user-toggle" type="button" aria-pressed="false">
+                  <span class="visually-hidden">Действия с аккаунтом</span>L
+                </button>
+              </div>
+            </div>
+            <h1 class="header__heading">Инвестиции</h1>
+          </header>
+          <div class="cabinet__content">
+            <a class="webpage__fixed-btn btn" href="#">отзывы</a>
+            <section class="cabinet__offer offer">
+              <div class="offer__image"></div>
+              <div class="offer__main">
+                <h2 class="offer__heading">Прибыльные инвестиционные портфели</h2>
+                <div class="offer__text">Результатом работы опытных аналитиков нашей компании стали оптимально подобранные прибыльные инвестиционные портфели, каждый из которых приносит различную прибыль и имеет свой порог входа. Уже сегодня Вы можете выбрать интересующий Вас инвестиционный портфель и начать зарабатывать на активах всего мира! Все торговые операции проводятся совместно с БКС «Брокер».</div>
+                <div class="offer__footer">
+                  <a class="offer__btn btn" href="#">Выбрать тарифный план</a>
+                  <a class="offer__btn btn btn--theme-black" href="#">Мои инвестиции</a>
+                </div>
+              </div>
+            </section>
+            <section class="cabinet__team-portfolios team-portfolios">
+              <h2 class="team-portfolios__heading heading">Портфели от нашей команды</h2>
+              <ul class="team-portfolios__list">
+                <li class="team-portfolios__item">
+                  <div class="team-portfolios__item-rating">
+                    <img src="img/star.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                  </div>
+                  <div class="team-portfolios__item-from">от ₽100,00</div>
+                  <div class="team-portfolios__item-type">Инвестиционный портфель</div>
+                  <div class="team-portfolios__item-name">«Финансы»</div>
+                  <div class="team-portfolios__item-profit">
+                    <div class="team-portfolios__item-profit-percent">5%</div>
+                    <div class="team-portfolios__item-profit-text">Прибыль за&nbsp;3&nbsp;бизнес-дня</div>
+                  </div>
+                  <div class="team-portfolios__item-footer">
+                    <div class="team-portfolios__item-footer-text"> Начисление<span class="red">В конце срока</span>
+                    </div>
+                    <div class="team-portfolios__item-footer-text">Период работы<span class="red">Бизнес дни</span>
+                    </div>
+                    <a class="team-portfolios__item-btn btn btn--size-small" href="#">Подробнее<span class="visually-hidden">Пополнить</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="team-portfolios__item">
+                  <div class="team-portfolios__item-rating">
+                    <img src="img/star.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                  </div>
+                  <div class="team-portfolios__item-from">от ₽100,00</div>
+                  <div class="team-portfolios__item-type">Инвестиционный портфель</div>
+                  <div class="team-portfolios__item-name">«Финансы»</div>
+                  <div class="team-portfolios__item-profit">
+                    <div class="team-portfolios__item-profit-percent">5%</div>
+                    <div class="team-portfolios__item-profit-text">Прибыль за&nbsp;3&nbsp;бизнес-дня</div>
+                  </div>
+                  <div class="team-portfolios__item-footer">
+                    <div class="team-portfolios__item-footer-text"> Начисление<span class="red">В конце срока</span>
+                    </div>
+                    <div class="team-portfolios__item-footer-text">Период работы<span class="red">Бизнес дни</span>
+                    </div>
+                    <a class="team-portfolios__item-btn btn btn--size-small" href="#">Подробнее<span class="visually-hidden">Пополнить</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="team-portfolios__item">
+                  <div class="team-portfolios__item-rating">
+                    <img src="img/star.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                    <img src="img/star-outline.svg" width="13" height="12" alt="">
+                  </div>
+                  <div class="team-portfolios__item-from">от ₽100,00</div>
+                  <div class="team-portfolios__item-type">Инвестиционный портфель</div>
+                  <div class="team-portfolios__item-name">«Финансы»</div>
+                  <div class="team-portfolios__item-profit">
+                    <div class="team-portfolios__item-profit-percent">5%</div>
+                    <div class="team-portfolios__item-profit-text">Прибыль за&nbsp;3&nbsp;бизнес-дня</div>
+                  </div>
+                  <div class="team-portfolios__item-footer">
+                    <div class="team-portfolios__item-footer-text"> Начисление<span class="red">В конце срока</span>
+                    </div>
+                    <div class="team-portfolios__item-footer-text">Период работы<span class="red">Бизнес дни</span>
+                    </div>
+                    <a class="team-portfolios__item-btn btn btn--size-small" href="#">Подробнее<span class="visually-hidden">Пополнить</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="news">
+              <h2 class="news__heading heading">Последние новости фин. рынка</h2>
+              <ul class="news__list">
+                <li class="news__item">
+                  <a class="news__item-image" href="#">
+                    <picture>
+                      <source type="image/webp" srcset="img/news-thumb.webp">
+                      <img src="img/news-thumb.jpg" alt="новость ">
+                    </picture>
+                  </a>
+                  <div class="news__item-text">После краткосрочного отскока российская валюта возвращается к снижению</div>
+                </li>
+                <li class="news__item">
+                  <a class="news__item-image" href="#">
+                    <picture>
+                      <source type="image/webp" srcset="img/news-thumb.webp">
+                      <img src="img/news-thumb.jpg" alt="новость ">
+                    </picture>
+                  </a>
+                  <div class="news__item-text">После краткосрочного отскока российская валюта возвращается к снижению</div>
+                </li>
+                <li class="news__item">
+                  <a class="news__item-image" href="#">
+                    <picture>
+                      <source type="image/webp" srcset="img/news-thumb.webp">
+                      <img src="img/news-thumb.jpg" alt="новость ">
+                    </picture>
+                  </a>
+                  <div class="news__item-text">После краткосрочного отскока российская валюта возвращается к снижению</div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <!--block footer-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--script(src="js/vendor/jquery-ui.min.js")-->
+  <!--script(src="js/vendor/swiper-bundle.min.js")-->
+  <!--script(src="js/vendor/magnific-popup.min.js")-->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
